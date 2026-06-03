@@ -14,7 +14,7 @@ import {
   type LetterState,
 } from "./lib/evaluate";
 import { toDisplay } from "./lib/normalize";
-import { buildShareGrid, buildShareText, copyShareText, getGameUrl } from "./lib/share";
+import { buildShareGrid, buildShareText, buildTelegramShareUrl, copyShareText, getGameUrl } from "./lib/share";
 import "./style.css";
 
 const MAX_GUESSES = 6;
@@ -51,7 +51,10 @@ const modalTitleEl = document.getElementById("modal-title")!;
 const modalTextEl = document.getElementById("modal-text")!;
 const modalBtnEl = document.getElementById("modal-btn")!;
 const modalShareEl = document.getElementById("modal-share") as HTMLButtonElement;
+const modalShareBlockEl = document.getElementById("modal-share-block")!;
 const modalSharePreviewEl = document.getElementById("modal-share-preview")!;
+const modalShareLinkEl = document.getElementById("modal-share-link") as HTMLAnchorElement;
+const modalTelegramEl = document.getElementById("modal-telegram") as HTMLButtonElement;
 const shareBtnEl = document.getElementById("share-btn") as HTMLButtonElement;
 const ageGateEl = document.getElementById("age-gate")!;
 const ageYesEl = document.getElementById("age-yes")!;
@@ -107,8 +110,7 @@ function setMessage(text: string, kind: "info" | "error" | "success" = "info"): 
 function showModal(title: string, text: string): void {
   modalTitleEl.textContent = title;
   modalTextEl.textContent = text;
-  modalSharePreviewEl.classList.add("hidden");
-  modalShareEl.classList.add("hidden");
+  modalShareBlockEl.classList.add("hidden");
   modalEl.classList.remove("hidden");
 }
 
@@ -146,12 +148,22 @@ function updateShareUi(): void {
   shareBtnEl.classList.toggle("hidden", !isGameFinished());
 }
 
+function openTelegramShare(): void {
+  window.open(buildTelegramShareUrl(getShareText()), "_blank", "noopener,noreferrer");
+}
+
+function fillShareBlock(): void {
+  const url = getGameUrl();
+  modalSharePreviewEl.textContent = buildShareGrid(game.guesses, game.puzzle.word);
+  modalShareLinkEl.href = url;
+  modalShareLinkEl.textContent = url;
+}
+
 function showEndModal(title: string, text: string): void {
   modalTitleEl.textContent = title;
   modalTextEl.textContent = text;
-  modalSharePreviewEl.textContent = buildShareGrid(game.guesses, game.puzzle.word);
-  modalSharePreviewEl.classList.remove("hidden");
-  modalShareEl.classList.remove("hidden");
+  fillShareBlock();
+  modalShareBlockEl.classList.remove("hidden");
   modalEl.classList.remove("hidden");
   updateShareUi();
 }
@@ -361,7 +373,17 @@ async function start(): Promise<void> {
   bindKeyboard();
   modalBtnEl.addEventListener("click", hideModal);
   modalShareEl.addEventListener("click", () => copyShareResult(modalShareEl));
-  shareBtnEl.addEventListener("click", () => copyShareResult(shareBtnEl));
+  modalTelegramEl.addEventListener("click", openTelegramShare);
+  shareBtnEl.addEventListener("click", () => {
+    fillShareBlock();
+    modalShareBlockEl.classList.remove("hidden");
+    modalTitleEl.textContent = game.status === "won" ? "Ваш результат" : "Игра окончена";
+    modalTextEl.textContent =
+      game.status === "won"
+        ? `Угадали за ${game.guesses.length} попыток`
+        : `Слово дня: ${game.puzzle.word}`;
+    modalEl.classList.remove("hidden");
+  });
 
   ageYesEl.addEventListener("click", () => {
     localStorage.setItem(ADULT_KEY, "true");

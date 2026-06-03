@@ -354,8 +354,10 @@ main {
   border: 1px solid #3a3a3c;
   border-radius: 12px;
   padding: 24px;
-  width: min(100%, 360px);
+  width: min(100%, 400px);
   text-align: center;
+  max-height: min(92dvh, 720px);
+  overflow-y: auto;
 }
 
 .modal-card h2 {
@@ -390,8 +392,50 @@ main {
   display: none;
 }
 
+.share-block.hidden {
+  display: none;
+}
+
+.share-link-label {
+  margin: 0 0 6px;
+  color: #a8a8aa;
+  font-size: 0.82rem;
+  text-align: left;
+}
+
+.share-link {
+  display: block;
+  margin: 0 0 14px;
+  padding: 10px 12px;
+  background: #121213;
+  border: 1px solid #3a3a3c;
+  border-radius: 8px;
+  color: #6eb5ff;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  word-break: break-all;
+  text-decoration: none;
+  text-align: left;
+}
+
+.share-link:hover {
+  text-decoration: underline;
+}
+
+.modal-actions--share {
+  margin-top: 4px;
+}
+
+.modal-actions button.telegram {
+  background: #2aabee;
+}
+
+.modal-actions button.secondary {
+  background: #3a3a3c;
+}
+
 .share-preview {
-  margin: 0 0 16px;
+  margin: 0 0 12px;
   padding: 12px;
   background: #121213;
   border-radius: 8px;
@@ -425,8 +469,4 @@ main {
 
 .share-btn.hidden {
   display: none;
-}
-
-.modal-actions .secondary {
-  background: #3a3a3c;
 }
