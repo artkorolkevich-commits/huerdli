@@ -14,6 +14,7 @@ import {
   type LetterState,
 } from "./lib/evaluate";
 import { toDisplay } from "./lib/normalize";
+import { pickLoseMessage } from "./lib/loseMessages";
 import { buildShareGrid, buildShareText, copyShareText, getGameUrl } from "./lib/share";
 import {
   isStatsRecorded,
@@ -38,6 +39,7 @@ type SavedState = {
   length: number;
   guesses: string[];
   status: "playing" | "won" | "lost";
+  loseMessage?: string;
 };
 
 type GameContext = {
@@ -47,6 +49,7 @@ type GameContext = {
   current: string;
   status: "playing" | "won" | "lost";
   keyboard: Map<string, LetterState>;
+  loseMessage: string | null;
 };
 
 const boardEl = document.getElementById("board")!;
@@ -99,6 +102,9 @@ function saveGame(): void {
     length: game.puzzle.length,
     guesses: game.guesses,
     status: game.status,
+    ...(game.status === "lost" && game.loseMessage
+      ? { loseMessage: game.loseMessage }
+      : {}),
   };
   localStorage.setItem(storageKey(game.puzzle.dateKey), JSON.stringify(payload));
 }
@@ -333,9 +339,10 @@ function submitGuess(): void {
     showEndModal("Победа!", `Слово дня: ${game.puzzle.word}`);
   } else if (game.guesses.length >= MAX_GUESSES) {
     game.status = "lost";
+    game.loseMessage = pickLoseMessage();
     setMessage("Попытки закончились", "error");
     syncStatsIfFinished();
-    showEndModal("Не повезло", `Слово дня: ${game.puzzle.word}`);
+    showEndModal(game.loseMessage, `Слово дня: ${game.puzzle.word}`);
   } else {
     setMessage("");
   }
@@ -427,6 +434,10 @@ function initGame(puzzle: DailyPuzzle, pools: WordPools): void {
     current: "",
     status: saved?.status ?? "playing",
     keyboard: new Map(),
+    loseMessage:
+      saved?.status === "lost"
+        ? (saved.loseMessage ?? pickLoseMessage())
+        : null,
   };
 
   for (const guess of game.guesses) {
@@ -437,7 +448,8 @@ function initGame(puzzle: DailyPuzzle, pools: WordPools): void {
   if (game.status === "won") {
     setMessage(`Вы уже угадали сегодня (${game.guesses.length} попыток)`, "success");
   } else if (game.status === "lost") {
-    setMessage(`Сегодня слово было: ${puzzle.word}`, "error");
+    setMessage(game.loseMessage ?? "Попытки закончились", "error");
+    if (!saved?.loseMessage) saveGame();
   }
 
   syncStatsIfFinished();
@@ -459,7 +471,8 @@ async function start(): Promise<void> {
   shareBtnEl.addEventListener("click", () => {
     fillShareBlock();
     modalShareBlockEl.classList.remove("hidden");
-    modalTitleEl.textContent = game.status === "won" ? "Ваш результат" : "Игра окончена";
+    modalTitleEl.textContent =
+      game.status === "won" ? "Ваш результат" : (game.loseMessage ?? "Игра окончена");
     modalTextEl.textContent =
       game.status === "won"
         ? `Угадали за ${game.guesses.length} попыток`
