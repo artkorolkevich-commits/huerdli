@@ -198,7 +198,7 @@ function renderKeyboard(): void {
     const keys = row
       .map((key) => {
         if (key === "enter") {
-          return `<button class="key key-wide" data-key="enter">Ввод</button>`;
+          return `<button class="key key-wide" data-key="enter" aria-label="Ввод"><span class="enter-long">Ввод</span><span class="enter-short" aria-hidden="true">↵</span></button>`;
         }
         if (key === "backspace") {
           return `<button class="key key-wide" data-key="backspace" aria-label="Стереть">⌫</button>`;
