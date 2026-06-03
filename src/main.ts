@@ -15,6 +15,7 @@ import {
 } from "./lib/evaluate";
 import { toDisplay } from "./lib/normalize";
 import { pickLoseMessage } from "./lib/loseMessages";
+import { pickWinMessage } from "./lib/winMessages";
 import { buildShareGrid, buildShareText, copyShareText, getGameUrl } from "./lib/share";
 import {
   isStatsRecorded,
@@ -40,6 +41,7 @@ type SavedState = {
   guesses: string[];
   status: "playing" | "won" | "lost";
   loseMessage?: string;
+  winMessage?: string;
 };
 
 type GameContext = {
@@ -50,6 +52,7 @@ type GameContext = {
   status: "playing" | "won" | "lost";
   keyboard: Map<string, LetterState>;
   loseMessage: string | null;
+  winMessage: string | null;
 };
 
 const boardEl = document.getElementById("board")!;
@@ -104,6 +107,9 @@ function saveGame(): void {
     status: game.status,
     ...(game.status === "lost" && game.loseMessage
       ? { loseMessage: game.loseMessage }
+      : {}),
+    ...(game.status === "won" && game.winMessage
+      ? { winMessage: game.winMessage }
       : {}),
   };
   localStorage.setItem(storageKey(game.puzzle.dateKey), JSON.stringify(payload));
@@ -334,9 +340,10 @@ function submitGuess(): void {
 
   if (guess === game.puzzle.word) {
     game.status = "won";
+    game.winMessage = pickWinMessage();
     setMessage(`Угадали за ${game.guesses.length}!`, "success");
     syncStatsIfFinished();
-    showEndModal("Победа!", `Слово дня: ${game.puzzle.word}`);
+    showEndModal(game.winMessage, `Угадали за ${game.guesses.length} попыток`);
   } else if (game.guesses.length >= MAX_GUESSES) {
     game.status = "lost";
     game.loseMessage = pickLoseMessage(guess);
@@ -439,6 +446,8 @@ function initGame(puzzle: DailyPuzzle, pools: WordPools): void {
         ? (saved.loseMessage ??
           pickLoseMessage(saved.guesses[saved.guesses.length - 1] ?? ""))
         : null,
+    winMessage:
+      saved?.status === "won" ? (saved.winMessage ?? pickWinMessage()) : null,
   };
 
   for (const guess of game.guesses) {
@@ -448,6 +457,7 @@ function initGame(puzzle: DailyPuzzle, pools: WordPools): void {
 
   if (game.status === "won") {
     setMessage(`Вы уже угадали сегодня (${game.guesses.length} попыток)`, "success");
+    if (!saved?.winMessage) saveGame();
   } else if (game.status === "lost") {
     setMessage(`Слово дня: ${puzzle.word}`, "error");
     if (!saved?.loseMessage) saveGame();
@@ -473,7 +483,9 @@ async function start(): Promise<void> {
     fillShareBlock();
     modalShareBlockEl.classList.remove("hidden");
     modalTitleEl.textContent =
-      game.status === "won" ? "Ваш результат" : (game.loseMessage ?? "Игра окончена");
+      game.status === "won"
+        ? (game.winMessage ?? "Ваш результат")
+        : (game.loseMessage ?? "Игра окончена");
     modalTextEl.textContent =
       game.status === "won"
         ? `Угадали за ${game.guesses.length} попыток`
