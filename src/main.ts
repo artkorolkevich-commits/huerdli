@@ -14,7 +14,7 @@ import {
   type LetterState,
 } from "./lib/evaluate";
 import { toDisplay } from "./lib/normalize";
-import { buildShareGrid, buildShareText, buildTelegramShareUrl, copyShareText, getGameUrl } from "./lib/share";
+import { buildShareGrid, buildShareText, copyShareText, getGameUrl } from "./lib/share";
 import "./style.css";
 
 const MAX_GUESSES = 6;
@@ -54,7 +54,6 @@ const modalShareEl = document.getElementById("modal-share") as HTMLButtonElement
 const modalShareBlockEl = document.getElementById("modal-share-block")!;
 const modalSharePreviewEl = document.getElementById("modal-share-preview")!;
 const modalShareLinkEl = document.getElementById("modal-share-link") as HTMLAnchorElement;
-const modalTelegramEl = document.getElementById("modal-telegram") as HTMLButtonElement;
 const shareBtnEl = document.getElementById("share-btn") as HTMLButtonElement;
 const ageGateEl = document.getElementById("age-gate")!;
 const ageYesEl = document.getElementById("age-yes")!;
@@ -146,10 +145,6 @@ async function copyShareResult(button: HTMLButtonElement): Promise<void> {
 
 function updateShareUi(): void {
   shareBtnEl.classList.toggle("hidden", !isGameFinished());
-}
-
-function openTelegramShare(): void {
-  window.open(buildTelegramShareUrl(getShareText()), "_blank", "noopener,noreferrer");
 }
 
 function fillShareBlock(): void {
@@ -373,7 +368,6 @@ async function start(): Promise<void> {
   bindKeyboard();
   modalBtnEl.addEventListener("click", hideModal);
   modalShareEl.addEventListener("click", () => copyShareResult(modalShareEl));
-  modalTelegramEl.addEventListener("click", openTelegramShare);
   shareBtnEl.addEventListener("click", () => {
     fillShareBlock();
     modalShareBlockEl.classList.remove("hidden");

@@ -54,10 +54,6 @@ export function getGameUrl(): string {
   return `${window.location.origin}${path}`;
 }
 
-export function buildTelegramShareUrl(shareText: string): string {
-  return `https://t.me/share/url?text=${encodeURIComponent(shareText)}`;
-}
-
 export async function copyShareText(text: string): Promise<void> {
   if (navigator.clipboard?.writeText) {
     await navigator.clipboard.writeText(text);
