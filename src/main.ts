@@ -290,13 +290,12 @@ function renderKeyboard(): void {
 }
 
 function updateSubtitle(): void {
-  const { gameNumber, length, profanity, dateKey } = game.puzzle;
+  const { gameNumber, dateKey } = game.puzzle;
   const parts = [
     `№${gameNumber}`,
     formatDateRu(dateKey),
-    `слово из ${length} букв`,
-    profanity ? "мат 18+" : null,
-  ].filter(Boolean);
+    "В игре может встречаться нецензурная брань",
+  ];
   subtitleEl.textContent = parts.join(" · ");
 }
 
@@ -491,7 +490,7 @@ async function boot(): Promise<void> {
 
     if (profanity && !isAdultConfirmed()) {
       ageGateEl.classList.remove("hidden");
-      subtitleEl.textContent = `${formatDateRu(dateKey)} · мат 18+ · подтвердите возраст`;
+      subtitleEl.textContent = `${formatDateRu(dateKey)} · подтвердите возраст`;
       return;
     }
 
