@@ -74,8 +74,11 @@ let game: GameContext;
 /** Строка с анимацией переворота после отправки слова; null — без анимации. */
 let revealingRow: number | null = null;
 
+/** Меняем при смене слова дня — старые сохранения игнорируются. */
+const GAME_STORAGE_VERSION = 2;
+
 function storageKey(dateKey: string): string {
-  return `huerdli-game-${dateKey}`;
+  return `huerdli-game-v${GAME_STORAGE_VERSION}-${dateKey}`;
 }
 
 function loadSaved(dateKey: string, length: number): SavedState | null {

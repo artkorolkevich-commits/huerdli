@@ -44,7 +44,7 @@ export function isProfanityDay(now = new Date()): boolean {
 
 /** Разовые замены слова дня (дата Москвы → слово). Удалить после использования. */
 const DAILY_WORD_OVERRIDES: Record<string, string> = {
-  "2026-06-03": "бляшка",
+  "2026-06-03": "пердун",
 };
 
 export function pickWordLength(dateKey: string): WordLength {
