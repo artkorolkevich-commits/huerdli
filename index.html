@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Хуердли</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <h1>Хуердли</h1>
+        <p class="subtitle" id="subtitle">Загрузка…</p>
+      </header>
+
+      <main>
+        <div id="board" class="board" aria-live="polite"></div>
+        <p id="message" class="message" role="status"></p>
+        <div id="keyboard" class="keyboard"></div>
+      </main>
+
+      <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+        <div class="modal-card">
+          <h2 id="modal-title"></h2>
+          <p id="modal-text"></p>
+          <button id="modal-btn" type="button">Понятно</button>
+        </div>
+      </div>
+
+      <div id="age-gate" class="modal hidden" role="dialog" aria-modal="true">
+        <div class="modal-card">
+          <h2>Контент 18+</h2>
+          <p>Сегодня слово из матового словаря. Продолжая, подтверждаете, что вам 18 лет.</p>
+          <div class="modal-actions">
+            <button id="age-yes" type="button">Мне есть 18</button>
+            <button id="age-no" type="button" class="secondary">Выйти</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
