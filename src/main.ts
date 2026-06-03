@@ -14,7 +14,7 @@ import {
   type LetterState,
 } from "./lib/evaluate";
 import { toDisplay } from "./lib/normalize";
-import { pickLoseMessage } from "./lib/loseMessages";
+import { buildLoseMessage } from "./lib/loseMessages";
 import { buildShareGrid, buildShareText, copyShareText, getGameUrl } from "./lib/share";
 import {
   isStatsRecorded,
@@ -339,7 +339,7 @@ function submitGuess(): void {
     showEndModal("Победа!", `Слово дня: ${game.puzzle.word}`);
   } else if (game.guesses.length >= MAX_GUESSES) {
     game.status = "lost";
-    game.loseMessage = pickLoseMessage();
+    game.loseMessage = buildLoseMessage(guess);
     setMessage("Попытки закончились", "error");
     syncStatsIfFinished();
     showEndModal(game.loseMessage, `Слово дня: ${game.puzzle.word}`);
@@ -436,7 +436,8 @@ function initGame(puzzle: DailyPuzzle, pools: WordPools): void {
     keyboard: new Map(),
     loseMessage:
       saved?.status === "lost"
-        ? (saved.loseMessage ?? pickLoseMessage())
+        ? (saved.loseMessage ??
+          buildLoseMessage(saved.guesses[saved.guesses.length - 1] ?? ""))
         : null,
   };
 

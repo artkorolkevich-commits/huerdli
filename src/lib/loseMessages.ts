@@ -1,23 +1,7 @@
-const LOSE_MESSAGES = [
-  "Ты лошара потный",
-  "Ну ты чмо",
-  "Ну ты и даун",
-  "Ну ты тупица",
-  "Ты тупой чтоли?",
-  "Ну ты даёшь, конечно",
-  "Что, поумней вариантов не смог придумать?",
-  "Лох",
-  "Пффф, иди вообще отсюда",
-  "Game over, а кто вообще сомневался?",
-  "В другой день попробуешь поумничать",
-  "Как вообще можно было не отгадать?",
-  "Ебаа.. так просто ведь было",
-  "Не получилось? Лошара",
-  "В следующий раз башку включай",
-  "Иди молочка попей, успокойся",
-] as const;
+import { toDisplay } from "./normalize";
 
-export function pickLoseMessage(): string {
-  const index = Math.floor(Math.random() * LOSE_MESSAGES.length);
-  return LOSE_MESSAGES[index]!;
+/** Сообщение при проигрыше: последняя попытка + «че серьёзно…» */
+export function buildLoseMessage(lastGuess: string): string {
+  const word = toDisplay(lastGuess) || "???";
+  return `${word} ? че серьезно, поумней ничего не нашлось?`;
 }
