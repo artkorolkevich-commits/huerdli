@@ -1,3 +1,7 @@
+import { getGameNumber } from "./stats";
+
+export type WordLength = 5 | 6;
+
 /** FNV-1a — одинаковый результат во всех JS-движках. */
 export function hashString(input: string): number {
   let hash = 2166136261;
@@ -17,8 +21,6 @@ export function mulberry32(seed: number): () => number {
     return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
   };
 }
-
-export type WordLength = 5 | 6;
 
 /** Календарная дата по Москве — у всех игроков один и тот же «день». */
 export function getMoscowDateKey(now = new Date()): string {
@@ -46,6 +48,7 @@ export function pickWordLength(dateKey: string): WordLength {
 
 export type DailyPuzzle = {
   dateKey: string;
+  gameNumber: number;
   length: WordLength;
   profanity: boolean;
   word: string;
@@ -91,6 +94,7 @@ export function pickDailyWord(
 
   return {
     dateKey,
+    gameNumber: getGameNumber(dateKey),
     length,
     profanity,
     word: words[index]!,

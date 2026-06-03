@@ -36,6 +36,9 @@ body {
 }
 
 .header {
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+  align-items: center;
   text-align: center;
   margin-bottom: 8px;
   width: min(100%, 520px);
@@ -43,10 +46,34 @@ body {
   padding-bottom: 12px;
 }
 
+.header-main {
+  min-width: 0;
+}
+
 .header h1 {
   margin: 0;
   font-size: 2rem;
   letter-spacing: 0.08em;
+}
+
+.header-spacer {
+  width: 40px;
+}
+
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.icon-btn:hover {
+  background: #3a3a3c;
 }
 
 .subtitle {
@@ -148,8 +175,13 @@ main {
 
 .cell.filled {
   border-color: #565658;
-  animation: pop 0.08s ease;
   z-index: 1;
+}
+
+.cell.settled.correct,
+.cell.settled.present,
+.cell.settled.absent {
+  /* без анимации — уже отгаданные строки */
 }
 
 .cell.correct {
@@ -175,18 +207,6 @@ main {
 .cell.reveal.absent {
   animation: flip 0.45s ease forwards;
   animation-delay: calc(var(--i) * 0.08s);
-}
-
-@keyframes pop {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.08);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 
 @keyframes flip {
@@ -465,4 +485,76 @@ main {
 
 .share-btn.hidden {
   display: none;
+}
+
+.modal-card--stats {
+  width: min(100%, 420px);
+  text-align: left;
+}
+
+.modal-card--stats h2 {
+  text-align: center;
+}
+
+.modal-card--stats > button {
+  display: block;
+  margin: 16px auto 0;
+}
+
+.stats-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stats-counters {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  text-align: center;
+}
+
+.stats-counter-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.stats-counter-label {
+  font-size: 0.72rem;
+  color: #a8a8aa;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.stats-bars-title {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #a8a8aa;
+  text-align: center;
+}
+
+.stats-bar-row {
+  display: grid;
+  grid-template-columns: 16px 1fr 28px;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.stats-bar-track {
+  height: 18px;
+  background: #3a3a3c;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.stats-bar-fill {
+  height: 100%;
+  background: var(--green);
+  border-radius: 3px;
+  min-width: 2px;
+}
+
+.stats-bar-fill.loss {
+  background: var(--gray-dark);
 }

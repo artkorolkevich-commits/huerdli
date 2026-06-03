@@ -15,6 +15,13 @@ import {
 } from "./lib/evaluate";
 import { toDisplay } from "./lib/normalize";
 import { buildShareGrid, buildShareText, copyShareText, getGameUrl } from "./lib/share";
+import {
+  isStatsRecorded,
+  loadStats,
+  maxDistribution,
+  recordGameResult,
+  winRate,
+} from "./lib/stats";
 import "./style.css";
 
 const MAX_GUESSES = 6;
@@ -55,11 +62,17 @@ const modalShareBlockEl = document.getElementById("modal-share-block")!;
 const modalSharePreviewEl = document.getElementById("modal-share-preview")!;
 const modalShareLinkEl = document.getElementById("modal-share-link") as HTMLAnchorElement;
 const shareBtnEl = document.getElementById("share-btn") as HTMLButtonElement;
+const statsBtnEl = document.getElementById("stats-btn") as HTMLButtonElement;
+const statsModalEl = document.getElementById("stats-modal")!;
+const statsBodyEl = document.getElementById("stats-body")!;
+const statsCloseEl = document.getElementById("stats-close") as HTMLButtonElement;
 const ageGateEl = document.getElementById("age-gate")!;
 const ageYesEl = document.getElementById("age-yes")!;
 const ageNoEl = document.getElementById("age-no")!;
 
 let game: GameContext;
+/** Строка с анимацией переворота после отправки слова; null — без анимации. */
+let revealingRow: number | null = null;
 
 function storageKey(dateKey: string): string {
   return `huerdli-game-${dateKey}`;
@@ -115,6 +128,57 @@ function showModal(title: string, text: string): void {
 
 function hideModal(): void {
   modalEl.classList.add("hidden");
+}
+
+function hideStatsModal(): void {
+  statsModalEl.classList.add("hidden");
+}
+
+function renderStatsModal(): void {
+  const stats = loadStats();
+  const max = maxDistribution(stats);
+  const bars = stats.distribution
+    .map((count, i) => {
+      const pct = Math.round((count / max) * 100);
+      return `<div class="stats-bar-row">
+        <span>${i + 1}</span>
+        <div class="stats-bar-track"><div class="stats-bar-fill" style="width:${pct}%"></div></div>
+        <span>${count}</span>
+      </div>`;
+    })
+    .join("");
+  const lossPct = Math.round((stats.losses / max) * 100);
+
+  statsBodyEl.innerHTML = `
+    <div class="stats-counters">
+      <div><div class="stats-counter-value">${stats.gamesPlayed}</div><div class="stats-counter-label">Игр</div></div>
+      <div><div class="stats-counter-value">${winRate(stats)}</div><div class="stats-counter-label">Побед %</div></div>
+      <div><div class="stats-counter-value">${stats.currentStreak}</div><div class="stats-counter-label">Серия</div></div>
+      <div><div class="stats-counter-value">${stats.maxStreak}</div><div class="stats-counter-label">Рекорд</div></div>
+    </div>
+    <p class="stats-bars-title">Распределение попыток</p>
+    ${bars}
+    <div class="stats-bar-row">
+      <span>X</span>
+      <div class="stats-bar-track"><div class="stats-bar-fill loss" style="width:${lossPct}%"></div></div>
+      <span>${stats.losses}</span>
+    </div>
+  `;
+}
+
+function showStatsModal(): void {
+  renderStatsModal();
+  statsModalEl.classList.remove("hidden");
+}
+
+function syncStatsIfFinished(): void {
+  if (!game || !isGameFinished()) return;
+  if (isStatsRecorded(game.puzzle.dateKey)) return;
+  recordGameResult(
+    game.puzzle.dateKey,
+    game.status === "won",
+    game.guesses.length,
+  );
 }
 
 function isGameFinished(): boolean {
@@ -189,10 +253,13 @@ function renderBoard(): void {
       const ch = raw[col]?.toUpperCase() ?? "";
       const state = letters?.[col]?.state ?? "empty";
       const filled = ch ? "filled" : "";
-      const animate = letters ? "reveal" : row === game.guesses.length && ch ? "active" : "";
+      let rowClass = "";
+      if (letters) {
+        rowClass = row === revealingRow ? "reveal" : "settled";
+      }
       const tilt = ((row * 7 + col * 13) % 21) - 10;
       rows.push(
-        `<div class="cell ${state} ${filled} ${animate}" data-col="${col}" style="--i:${col};--tilt:${tilt}">${ch}</div>`,
+        `<div class="cell ${state} ${filled} ${rowClass}" data-col="${col}" style="--i:${col};--tilt:${tilt}">${ch}</div>`,
       );
     }
   }
@@ -220,8 +287,9 @@ function renderKeyboard(): void {
 }
 
 function updateSubtitle(): void {
-  const { length, profanity, dateKey } = game.puzzle;
+  const { gameNumber, length, profanity, dateKey } = game.puzzle;
   const parts = [
+    `№${gameNumber}`,
     formatDateRu(dateKey),
     `слово из ${length} букв`,
     profanity ? "мат 18+" : null,
@@ -251,6 +319,7 @@ function submitGuess(): void {
 
   game.guesses.push(guess);
   game.current = "";
+  revealingRow = game.guesses.length - 1;
 
   const evaluated = evaluateGuess(guess, game.puzzle.word);
   game.keyboard = mergeKeyboardState(game.keyboard, evaluated);
@@ -258,10 +327,12 @@ function submitGuess(): void {
   if (guess === game.puzzle.word) {
     game.status = "won";
     setMessage(`Угадали за ${game.guesses.length}!`, "success");
+    syncStatsIfFinished();
     showEndModal("Победа!", `Слово дня: ${game.puzzle.word}`);
   } else if (game.guesses.length >= MAX_GUESSES) {
     game.status = "lost";
     setMessage("Попытки закончились", "error");
+    syncStatsIfFinished();
     showEndModal("Не повезло", `Слово дня: ${game.puzzle.word}`);
   } else {
     setMessage("");
@@ -270,6 +341,11 @@ function submitGuess(): void {
   saveGame();
   renderBoard();
   renderKeyboard();
+
+  window.setTimeout(() => {
+    revealingRow = null;
+    renderBoard();
+  }, 600);
 }
 
 function addLetter(letter: string): void {
@@ -308,6 +384,10 @@ function bindKeyboard(): void {
 
   window.addEventListener("keydown", (event) => {
     if (!ageGateEl.classList.contains("hidden")) return;
+    if (!statsModalEl.classList.contains("hidden") && event.key === "Escape") {
+      hideStatsModal();
+      return;
+    }
     if (!modalEl.classList.contains("hidden") && event.key === "Enter") {
       hideModal();
       return;
@@ -358,6 +438,7 @@ function initGame(puzzle: DailyPuzzle, pools: WordPools): void {
     setMessage(`Сегодня слово было: ${puzzle.word}`, "error");
   }
 
+  syncStatsIfFinished();
   updateShareUi();
   updateSubtitle();
   renderBoard();
@@ -368,6 +449,11 @@ async function start(): Promise<void> {
   bindKeyboard();
   modalBtnEl.addEventListener("click", hideModal);
   modalShareEl.addEventListener("click", () => copyShareResult(modalShareEl));
+  statsBtnEl.addEventListener("click", showStatsModal);
+  statsCloseEl.addEventListener("click", hideStatsModal);
+  statsModalEl.addEventListener("click", (event) => {
+    if (event.target === statsModalEl) hideStatsModal();
+  });
   shareBtnEl.addEventListener("click", () => {
     fillShareBlock();
     modalShareBlockEl.classList.remove("hidden");

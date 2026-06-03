@@ -14,8 +14,12 @@
   <body>
     <div id="app">
       <header class="header">
-        <h1>Хуердли</h1>
-        <p class="subtitle" id="subtitle">Загрузка…</p>
+        <button id="stats-btn" type="button" class="icon-btn" aria-label="Статистика">📊</button>
+        <div class="header-main">
+          <h1>Хуердли</h1>
+          <p class="subtitle" id="subtitle">Загрузка…</p>
+        </div>
+        <div class="header-spacer" aria-hidden="true"></div>
       </header>
 
       <main>
@@ -24,6 +28,14 @@
         <button id="share-btn" type="button" class="share-btn hidden">Поделиться результатом</button>
         <div id="keyboard" class="keyboard"></div>
       </main>
+
+      <div id="stats-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="stats-title">
+        <div class="modal-card modal-card--stats">
+          <h2 id="stats-title">Статистика</h2>
+          <div id="stats-body" class="stats-body"></div>
+          <button id="stats-close" type="button" class="secondary">Закрыть</button>
+        </div>
+      </div>
 
       <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
         <div class="modal-card">

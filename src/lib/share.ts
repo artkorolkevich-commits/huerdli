@@ -37,7 +37,7 @@ export function buildShareText(
   const attempts = status === "won" ? `${guesses.length}/6` : "X/6";
 
   const lines = [
-    `Хуердли ${formatDateShort(puzzle.dateKey)} · ${puzzle.length} букв`,
+    `Хуердли #${puzzle.gameNumber} · ${formatDateShort(puzzle.dateKey)} · ${puzzle.length} букв`,
     attempts,
     "",
     buildShareGrid(guesses, puzzle.word),
