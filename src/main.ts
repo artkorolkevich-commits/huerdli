@@ -14,6 +14,7 @@ import {
   type LetterState,
 } from "./lib/evaluate";
 import { toDisplay } from "./lib/normalize";
+import { buildShareGrid, buildShareText, copyShareText, getGameUrl } from "./lib/share";
 import "./style.css";
 
 const MAX_GUESSES = 6;
@@ -49,6 +50,9 @@ const modalEl = document.getElementById("modal")!;
 const modalTitleEl = document.getElementById("modal-title")!;
 const modalTextEl = document.getElementById("modal-text")!;
 const modalBtnEl = document.getElementById("modal-btn")!;
+const modalShareEl = document.getElementById("modal-share") as HTMLButtonElement;
+const modalSharePreviewEl = document.getElementById("modal-share-preview")!;
+const shareBtnEl = document.getElementById("share-btn") as HTMLButtonElement;
 const ageGateEl = document.getElementById("age-gate")!;
 const ageYesEl = document.getElementById("age-yes")!;
 const ageNoEl = document.getElementById("age-no")!;
@@ -103,11 +107,53 @@ function setMessage(text: string, kind: "info" | "error" | "success" = "info"): 
 function showModal(title: string, text: string): void {
   modalTitleEl.textContent = title;
   modalTextEl.textContent = text;
+  modalSharePreviewEl.classList.add("hidden");
+  modalShareEl.classList.add("hidden");
   modalEl.classList.remove("hidden");
 }
 
 function hideModal(): void {
   modalEl.classList.add("hidden");
+}
+
+function isGameFinished(): boolean {
+  return game.status === "won" || game.status === "lost";
+}
+
+function getShareText(): string {
+  return buildShareText(
+    game.puzzle,
+    game.guesses,
+    game.status === "won" ? "won" : "lost",
+    getGameUrl(),
+  );
+}
+
+async function copyShareResult(button: HTMLButtonElement): Promise<void> {
+  const label = button.textContent;
+  try {
+    await copyShareText(getShareText());
+    button.textContent = "Скопировано!";
+    window.setTimeout(() => {
+      button.textContent = label;
+    }, 2000);
+  } catch {
+    setMessage("Не удалось скопировать", "error");
+  }
+}
+
+function updateShareUi(): void {
+  shareBtnEl.classList.toggle("hidden", !isGameFinished());
+}
+
+function showEndModal(title: string, text: string): void {
+  modalTitleEl.textContent = title;
+  modalTextEl.textContent = text;
+  modalSharePreviewEl.textContent = buildShareGrid(game.guesses, game.puzzle.word);
+  modalSharePreviewEl.classList.remove("hidden");
+  modalShareEl.classList.remove("hidden");
+  modalEl.classList.remove("hidden");
+  updateShareUi();
 }
 
 function boardSizeClass(length: number): string {
@@ -205,11 +251,11 @@ function submitGuess(): void {
   if (guess === game.puzzle.word) {
     game.status = "won";
     setMessage(`Угадали за ${game.guesses.length}!`, "success");
-    showModal("Победа!", `Слово дня: ${game.puzzle.word}`);
+    showEndModal("Победа!", `Слово дня: ${game.puzzle.word}`);
   } else if (game.guesses.length >= MAX_GUESSES) {
     game.status = "lost";
     setMessage("Попытки закончились", "error");
-    showModal("Не повезло", `Слово дня: ${game.puzzle.word}`);
+    showEndModal("Не повезло", `Слово дня: ${game.puzzle.word}`);
   } else {
     setMessage("");
   }
@@ -305,6 +351,7 @@ function initGame(puzzle: DailyPuzzle, pools: WordPools): void {
     setMessage(`Сегодня слово было: ${puzzle.word}`, "error");
   }
 
+  updateShareUi();
   updateSubtitle();
   renderBoard();
   renderKeyboard();
@@ -313,6 +360,8 @@ function initGame(puzzle: DailyPuzzle, pools: WordPools): void {
 async function start(): Promise<void> {
   bindKeyboard();
   modalBtnEl.addEventListener("click", hideModal);
+  modalShareEl.addEventListener("click", () => copyShareResult(modalShareEl));
+  shareBtnEl.addEventListener("click", () => copyShareResult(shareBtnEl));
 
   ageYesEl.addEventListener("click", () => {
     localStorage.setItem(ADULT_KEY, "true");

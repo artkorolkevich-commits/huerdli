@@ -311,6 +311,48 @@ main {
   display: flex;
   gap: 8px;
   justify-content: center;
+  flex-wrap: wrap;
+}
+
+.modal-actions button.hidden {
+  display: none;
+}
+
+.share-preview {
+  margin: 0 0 16px;
+  padding: 12px;
+  background: #121213;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  line-height: 1.35;
+  text-align: left;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  color: #eee;
+}
+
+.share-preview.hidden {
+  display: none;
+}
+
+.share-btn {
+  margin: 0 0 8px;
+  border: 1px solid #3a3a3c;
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.share-btn:hover {
+  background: #3a3a3c;
+}
+
+.share-btn.hidden {
+  display: none;
 }
 
 .modal-actions .secondary {

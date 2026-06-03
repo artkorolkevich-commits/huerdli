@@ -21,6 +21,7 @@
       <main>
         <div id="board" class="board" aria-live="polite"></div>
         <p id="message" class="message" role="status"></p>
+        <button id="share-btn" type="button" class="share-btn hidden">Поделиться результатом</button>
         <div id="keyboard" class="keyboard"></div>
       </main>
 
@@ -28,7 +29,11 @@
         <div class="modal-card">
           <h2 id="modal-title"></h2>
           <p id="modal-text"></p>
-          <button id="modal-btn" type="button">Понятно</button>
+          <pre id="modal-share-preview" class="share-preview hidden" aria-hidden="true"></pre>
+          <div class="modal-actions">
+            <button id="modal-share" type="button" class="hidden">Скопировать результат</button>
+            <button id="modal-btn" type="button">Понятно</button>
+          </div>
         </div>
       </div>
 
