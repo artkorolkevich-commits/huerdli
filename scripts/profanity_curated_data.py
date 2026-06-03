@@ -115,6 +115,7 @@ CURATED_PROFANITY_NOUNS: frozenset[str] = frozenset({
     'пидора',
     'пизда',
     'пиздец',
+    'пиздеж',
     'пиздон',
     'пиздун',
     'пиздык',
