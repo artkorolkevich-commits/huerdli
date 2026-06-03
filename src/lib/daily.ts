@@ -42,6 +42,11 @@ export function isProfanityDay(now = new Date()): boolean {
   return weekday === "Mon" || weekday === "Wed" || weekday === "Fri";
 }
 
+/** Разовые замены слова дня (дата Москвы → слово). Удалить после использования. */
+const DAILY_WORD_OVERRIDES: Record<string, string> = {
+  "2026-06-03": "залупа",
+};
+
 export function pickWordLength(dateKey: string): WordLength {
   return (5 + (hashString(`${dateKey}:len`) % 2)) as WordLength;
 }
@@ -85,6 +90,22 @@ export function pickDailyWord(
 
   if (words.length === 0) {
     throw new Error(`Пустой словарь для длины ${length}`);
+  }
+
+  const overrideRaw = DAILY_WORD_OVERRIDES[dateKey];
+  if (overrideRaw) {
+    const normalized = overrideRaw.toLowerCase().replace(/ё/g, "е");
+    const match = words.find((w) => w.toLowerCase().replace(/ё/g, "е") === normalized);
+    if (match && match.length === length) {
+      return {
+        dateKey,
+        gameNumber: getGameNumber(dateKey),
+        length,
+        profanity,
+        word: match,
+        index: words.indexOf(match),
+      };
+    }
   }
 
   const rng = mulberry32(
