@@ -14,7 +14,7 @@ import {
   type LetterState,
 } from "./lib/evaluate";
 import { toDisplay } from "./lib/normalize";
-import { buildLoseMessage } from "./lib/loseMessages";
+import { pickLoseMessage } from "./lib/loseMessages";
 import { buildShareGrid, buildShareText, copyShareText, getGameUrl } from "./lib/share";
 import {
   isStatsRecorded,
@@ -339,8 +339,8 @@ function submitGuess(): void {
     showEndModal("Победа!", `Слово дня: ${game.puzzle.word}`);
   } else if (game.guesses.length >= MAX_GUESSES) {
     game.status = "lost";
-    game.loseMessage = buildLoseMessage(guess);
-    setMessage("Попытки закончились", "error");
+    game.loseMessage = pickLoseMessage(guess);
+    setMessage(`Слово дня: ${game.puzzle.word}`, "error");
     syncStatsIfFinished();
     showEndModal(game.loseMessage, `Слово дня: ${game.puzzle.word}`);
   } else {
@@ -437,7 +437,7 @@ function initGame(puzzle: DailyPuzzle, pools: WordPools): void {
     loseMessage:
       saved?.status === "lost"
         ? (saved.loseMessage ??
-          buildLoseMessage(saved.guesses[saved.guesses.length - 1] ?? ""))
+          pickLoseMessage(saved.guesses[saved.guesses.length - 1] ?? ""))
         : null,
   };
 
@@ -449,7 +449,7 @@ function initGame(puzzle: DailyPuzzle, pools: WordPools): void {
   if (game.status === "won") {
     setMessage(`Вы уже угадали сегодня (${game.guesses.length} попыток)`, "success");
   } else if (game.status === "lost") {
-    setMessage(game.loseMessage ?? "Попытки закончились", "error");
+    setMessage(`Слово дня: ${puzzle.word}`, "error");
     if (!saved?.loseMessage) saveGame();
   }
 
