@@ -7,19 +7,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Unbounded:wght@700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <div id="app">
       <header class="header">
-        <button id="stats-btn" type="button" class="icon-btn" aria-label="Статистика">📊</button>
+        <div class="header-side">
+          <button
+            id="stats-btn"
+            type="button"
+            class="icon-btn"
+            aria-label="Статистика"
+            title="Статистика"
+          >
+            <svg class="icon-btn-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M4 20V11M10 20V4M16 20v-7M22 20V8"
+                stroke="currentColor"
+                stroke-width="2.25"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </div>
         <div class="header-main">
-          <h1>Хуердли</h1>
+          <h1 class="logo"><span class="logo-mark">Ху</span>ердли</h1>
           <p class="subtitle" id="subtitle">Загрузка…</p>
         </div>
-        <div class="header-spacer" aria-hidden="true"></div>
+        <div class="header-side header-side--mirror" aria-hidden="true"></div>
       </header>
 
       <main>
@@ -41,6 +58,26 @@
         <div class="modal-card">
           <h2 id="modal-title"></h2>
           <p id="modal-text"></p>
+          <div id="modal-answer-row" class="modal-answer-row hidden">
+            <span id="modal-answer-word" class="modal-answer-word"></span>
+            <button
+              id="modal-explainer-btn"
+              type="button"
+              class="explainer-btn-icon-only"
+              aria-label="Что это такое?"
+              aria-expanded="false"
+              title="Что это такое?"
+            >
+              <span class="explainer-btn-mark" aria-hidden="true">?</span>
+            </button>
+          </div>
+          <div id="modal-explainer" class="word-explainer hidden" aria-live="polite">
+            <p id="modal-explainer-definition" class="word-explainer-definition"></p>
+            <p id="modal-explainer-example" class="word-explainer-example"></p>
+            <figure id="modal-explainer-figure" class="word-explainer-figure hidden">
+              <img id="modal-explainer-image" class="word-explainer-image" alt="" loading="lazy" />
+            </figure>
+          </div>
           <div id="modal-share-block" class="share-block hidden">
             <pre id="modal-share-preview" class="share-preview" aria-hidden="true"></pre>
             <p class="share-link-label">Ссылка на игру</p>
@@ -62,7 +99,7 @@
       <div id="age-gate" class="modal hidden" role="dialog" aria-modal="true">
         <div class="modal-card">
           <h2>Контент 18+</h2>
-          <p>Сегодня слово из матового словаря. Продолжая, подтверждаете, что вам 18 лет.</p>
+          <p>Сегодня слово из мем-словаря (мат, двач, рунет). Продолжая, подтверждаете, что вам 18 лет.</p>
           <div class="modal-actions">
             <button id="age-yes" type="button">Мне есть 18</button>
             <button id="age-no" type="button" class="secondary">Выйти</button>

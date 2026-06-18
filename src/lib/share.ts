@@ -8,16 +8,6 @@ const EMOJI: Record<LetterState, string> = {
   empty: "⬜",
 };
 
-function formatDateShort(dateKey: string): string {
-  const [y, m, d] = dateKey.split("-").map(Number);
-  return new Intl.DateTimeFormat("ru-RU", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    timeZone: "Europe/Moscow",
-  }).format(new Date(Date.UTC(y!, m! - 1, d!)));
-}
-
 export function buildShareGrid(guesses: string[], answer: string): string {
   return guesses
     .map((guess) =>
@@ -37,8 +27,7 @@ export function buildShareText(
   const attempts = status === "won" ? `${guesses.length}/6` : "X/6";
 
   const lines = [
-    `Хуердли #${puzzle.gameNumber} · ${formatDateShort(puzzle.dateKey)} · ${puzzle.length} букв`,
-    attempts,
+    `Хуердли #${puzzle.gameNumber} · ${puzzle.length} букв ${attempts}`,
     "",
     buildShareGrid(guesses, puzzle.word),
     "",

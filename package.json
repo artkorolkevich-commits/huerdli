@@ -7,7 +7,15 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "dict:sync": "cp dictionaries/*.txt public/dictionaries/"
+    "preview:pages": "VITE_BASE_PATH=/huerdli/ npm run build && vite preview --base /huerdli/",
+    "dict:sync": "cp dictionaries/*.txt public/dictionaries/ && cp sources/dictionary-bundle.json public/dictionary-bundle.json",
+    "profanity:review": ".venv/bin/python scripts/build_profanity_review.py",
+    "review:enrich": ".venv/bin/python scripts/word_review_enrichment.py",
+    "review:fill-images": ".venv/bin/python scripts/fill_all_meme_images.py",
+    "review:export": ".venv/bin/python scripts/export_dictionary_bundle.py",
+    "review:serve": "python3 -m http.server 8787 --directory public",
+    "review": "npm run profanity:review && npm run review:serve",
+    "dvach:collect": ".venv/bin/python scripts/collect_dvach_words.py && .venv/bin/python scripts/ensure_dvach_definitions.py"
   },
   "devDependencies": {
     "typescript": "^5.8.3",

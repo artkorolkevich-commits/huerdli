@@ -1,7 +1,7 @@
 import {
   buildWordPools,
   getMoscowDateKey,
-  isProfanityDay,
+  isClassicDay,
   pickDailyWord,
   type DailyPuzzle,
   type WordPools,
@@ -24,6 +24,7 @@ import {
   recordGameResult,
   winRate,
 } from "./lib/stats";
+import { getWordEntry, type WordLexicon } from "./lib/wordBundle";
 import "./style.css";
 
 const MAX_GUESSES = 6;
@@ -32,7 +33,7 @@ const ADULT_KEY = "huerdli-adult-v1";
 const KEYBOARD_ROWS = [
   ["й", "ц", "у", "к", "е", "н", "г", "ш", "щ", "з", "х", "ъ"],
   ["ф", "ы", "в", "а", "п", "р", "о", "л", "д", "ж", "э"],
-  ["enter", "я", "ч", "с", "м", "и", "т", "ь", "б", "ю", "backspace"],
+  ["backspace", "я", "ч", "с", "м", "и", "т", "ь", "б", "ю", "enter"],
 ];
 
 type SavedState = {
@@ -47,6 +48,7 @@ type SavedState = {
 type GameContext = {
   puzzle: DailyPuzzle;
   pools: WordPools;
+  lexicon: WordLexicon;
   guesses: string[];
   current: string;
   status: "playing" | "won" | "lost";
@@ -67,6 +69,14 @@ const modalShareEl = document.getElementById("modal-share") as HTMLButtonElement
 const modalShareBlockEl = document.getElementById("modal-share-block")!;
 const modalSharePreviewEl = document.getElementById("modal-share-preview")!;
 const modalShareLinkEl = document.getElementById("modal-share-link") as HTMLAnchorElement;
+const modalAnswerRowEl = document.getElementById("modal-answer-row")!;
+const modalAnswerWordEl = document.getElementById("modal-answer-word")!;
+const modalExplainerBtnEl = document.getElementById("modal-explainer-btn")!;
+const modalExplainerEl = document.getElementById("modal-explainer")!;
+const modalExplainerDefinitionEl = document.getElementById("modal-explainer-definition")!;
+const modalExplainerExampleEl = document.getElementById("modal-explainer-example")!;
+const modalExplainerFigureEl = document.getElementById("modal-explainer-figure")!;
+const modalExplainerImageEl = document.getElementById("modal-explainer-image") as HTMLImageElement;
 const shareBtnEl = document.getElementById("share-btn") as HTMLButtonElement;
 const statsBtnEl = document.getElementById("stats-btn") as HTMLButtonElement;
 const statsModalEl = document.getElementById("stats-modal")!;
@@ -81,7 +91,7 @@ let game: GameContext;
 let revealingRow: number | null = null;
 
 /** Меняем при смене слова дня — старые сохранения игнорируются. */
-const GAME_STORAGE_VERSION = 2;
+const GAME_STORAGE_VERSION = 4;
 
 function storageKey(dateKey: string): string {
   return `huerdli-game-v${GAME_STORAGE_VERSION}-${dateKey}`;
@@ -119,16 +129,6 @@ function isAdultConfirmed(): boolean {
   return localStorage.getItem(ADULT_KEY) === "true";
 }
 
-function formatDateRu(dateKey: string): string {
-  const [y, m, d] = dateKey.split("-").map(Number);
-  return new Intl.DateTimeFormat("ru-RU", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    timeZone: "Europe/Moscow",
-  }).format(new Date(Date.UTC(y!, m! - 1, d!)));
-}
-
 function setMessage(text: string, kind: "info" | "error" | "success" = "info"): void {
   messageEl.textContent = text;
   messageEl.dataset.kind = kind;
@@ -138,11 +138,76 @@ function showModal(title: string, text: string): void {
   modalTitleEl.textContent = title;
   modalTextEl.textContent = text;
   modalShareBlockEl.classList.add("hidden");
+  modalAnswerRowEl.classList.add("hidden");
+  collapseWordExplainer();
   modalEl.classList.remove("hidden");
 }
 
 function hideModal(): void {
   modalEl.classList.add("hidden");
+  collapseWordExplainer();
+}
+
+function collapseWordExplainer(): void {
+  modalExplainerEl.classList.add("hidden");
+  modalExplainerBtnEl.setAttribute("aria-expanded", "false");
+}
+
+function renderWordExplainer(word: string): void {
+  const entry = getWordEntry(game.lexicon, word);
+  if (!entry) {
+    modalExplainerDefinitionEl.textContent =
+      "Слово из классического словаря — краткого объяснения пока нет.";
+    modalExplainerExampleEl.textContent = "";
+    modalExplainerExampleEl.classList.add("hidden");
+    modalExplainerFigureEl.classList.add("hidden");
+    return;
+  }
+
+  modalExplainerDefinitionEl.textContent = entry.definition;
+
+  if (entry.example) {
+    modalExplainerExampleEl.textContent = entry.example;
+    modalExplainerExampleEl.classList.remove("hidden");
+  } else {
+    modalExplainerExampleEl.textContent = "";
+    modalExplainerExampleEl.classList.add("hidden");
+  }
+
+  if (entry.image) {
+    modalExplainerImageEl.src = entry.image;
+    modalExplainerImageEl.alt = entry.word;
+    modalExplainerFigureEl.classList.remove("hidden");
+  } else {
+    modalExplainerImageEl.removeAttribute("src");
+    modalExplainerFigureEl.classList.add("hidden");
+  }
+}
+
+function toggleWordExplainer(): void {
+  const expanded = !modalExplainerEl.classList.contains("hidden");
+  if (expanded) {
+    collapseWordExplainer();
+    return;
+  }
+  renderWordExplainer(game.puzzle.word);
+  modalExplainerEl.classList.remove("hidden");
+  modalExplainerBtnEl.setAttribute("aria-expanded", "true");
+}
+
+function fillAnswerRow(word: string): void {
+  modalAnswerWordEl.textContent = word;
+  modalAnswerRowEl.classList.remove("hidden");
+}
+
+function updateExplainerUi(): void {
+  const show = isGameFinished();
+  if (show) {
+    fillAnswerRow(game.puzzle.word);
+  } else {
+    modalAnswerRowEl.classList.add("hidden");
+    collapseWordExplainer();
+  }
 }
 
 function hideStatsModal(): void {
@@ -236,14 +301,19 @@ function fillShareBlock(): void {
 function showEndModal(title: string, text: string): void {
   modalTitleEl.textContent = title;
   modalTextEl.textContent = text;
+  fillAnswerRow(game.puzzle.word);
   fillShareBlock();
+  collapseWordExplainer();
   modalShareBlockEl.classList.remove("hidden");
   modalEl.classList.remove("hidden");
   updateShareUi();
 }
 
 function boardSizeClass(length: number): string {
-  return length >= 6 ? "board--len-6" : "board--len-5";
+  if (length >= 8) return "board--len-8";
+  if (length >= 7) return "board--len-7";
+  if (length >= 6) return "board--len-6";
+  return "board--len-5";
 }
 
 function renderBoard(): void {
@@ -283,32 +353,27 @@ function renderBoard(): void {
 }
 
 function renderKeyboard(): void {
-  keyboardEl.innerHTML = KEYBOARD_ROWS.map((row) => {
+  keyboardEl.innerHTML = KEYBOARD_ROWS.map((row, rowIndex) => {
+    const rowClass = rowIndex === 1 ? "kb-row kb-row--inset" : "kb-row";
     const keys = row
       .map((key) => {
         if (key === "enter") {
-          return `<button class="key key-wide" data-key="enter" aria-label="Ввод"><span class="enter-long">Ввод</span><span class="enter-short" aria-hidden="true">↵</span></button>`;
+          return `<button class="key key-action key-enter" data-key="enter" aria-label="Ввод"><svg class="key-icon enter-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 14 4 9l5-5" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 9h10.5a3.5 3.5 0 0 1 0 7H12" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/></svg><span class="enter-label">Ввод</span></button>`;
         }
         if (key === "backspace") {
-          return `<button class="key key-wide" data-key="backspace" aria-label="Стереть">⌫</button>`;
+          return `<button class="key key-action key-backspace" data-key="backspace" aria-label="Стереть"><svg class="key-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6H20.5a1.5 1.5 0 0 1 1.5 1.5v9a1.5 1.5 0 0 1-1.5 1.5H9l-5.5-5.5L9 6Z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/><path d="m13 9.5-3 3m0-3 3 3" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></button>`;
         }
         const state = game.keyboard.get(key) ?? "empty";
         const stateClass = state === "empty" ? "" : state;
         return `<button class="key ${stateClass}" data-key="${key}" aria-label="${key.toUpperCase()}">${key.toUpperCase()}</button>`;
       })
       .join("");
-    return `<div class="kb-row">${keys}</div>`;
+    return `<div class="${rowClass}">${keys}</div>`;
   }).join("");
 }
 
 function updateSubtitle(): void {
-  const { gameNumber, dateKey } = game.puzzle;
-  const parts = [
-    `№${gameNumber}`,
-    formatDateRu(dateKey),
-    "В игре может встречаться нецензурная брань",
-  ];
-  subtitleEl.textContent = parts.join(" · ");
+  subtitleEl.textContent = `№${game.puzzle.gameNumber}`;
 }
 
 function submitGuess(): void {
@@ -325,7 +390,13 @@ function submitGuess(): void {
   }
 
   if (!game.pools[length].guess.has(guess)) {
-    setMessage("Нет в словаре", "error");
+    const poolSize = game.pools[length].guess.size;
+    setMessage(
+      poolSize > 0
+        ? `Нет в словаре (${length} букв, слов в базе: ${poolSize})`
+        : "Нет в словаре",
+      "error",
+    );
     boardEl.classList.add("shake");
     window.setTimeout(() => boardEl.classList.remove("shake"), 400);
     return;
@@ -349,7 +420,7 @@ function submitGuess(): void {
     game.loseMessage = pickLoseMessage(guess);
     setMessage(`Слово дня: ${game.puzzle.word}`, "error");
     syncStatsIfFinished();
-    showEndModal(game.loseMessage, `Слово дня: ${game.puzzle.word}`);
+    showEndModal(game.loseMessage, `Попытки: ${game.guesses.length}/${MAX_GUESSES}`);
   } else {
     setMessage("");
   }
@@ -432,11 +503,16 @@ function bindKeyboard(): void {
   });
 }
 
-function initGame(puzzle: DailyPuzzle, pools: WordPools): void {
+function initGame(
+  puzzle: DailyPuzzle,
+  pools: WordPools,
+  lexicon: WordLexicon,
+): void {
   const saved = loadSaved(puzzle.dateKey, puzzle.length);
   game = {
     puzzle,
     pools,
+    lexicon,
     guesses: saved?.guesses ?? [],
     current: "",
     status: saved?.status ?? "playing",
@@ -465,6 +541,7 @@ function initGame(puzzle: DailyPuzzle, pools: WordPools): void {
 
   syncStatsIfFinished();
   updateShareUi();
+  updateExplainerUi();
   updateSubtitle();
   renderBoard();
   renderKeyboard();
@@ -473,6 +550,7 @@ function initGame(puzzle: DailyPuzzle, pools: WordPools): void {
 async function start(): Promise<void> {
   bindKeyboard();
   modalBtnEl.addEventListener("click", hideModal);
+  modalExplainerBtnEl.addEventListener("click", toggleWordExplainer);
   modalShareEl.addEventListener("click", () => copyShareResult(modalShareEl));
   statsBtnEl.addEventListener("click", showStatsModal);
   statsCloseEl.addEventListener("click", hideStatsModal);
@@ -489,7 +567,9 @@ async function start(): Promise<void> {
     modalTextEl.textContent =
       game.status === "won"
         ? `Угадали за ${game.guesses.length} попыток`
-        : `Слово дня: ${game.puzzle.word}`;
+        : `Попытки: ${game.guesses.length}/${MAX_GUESSES}`;
+    fillAnswerRow(game.puzzle.word);
+    collapseWordExplainer();
     modalEl.classList.remove("hidden");
   });
 
@@ -501,7 +581,7 @@ async function start(): Promise<void> {
 
   ageNoEl.addEventListener("click", () => {
     document.body.innerHTML =
-      '<main style="padding:2rem;font-family:Inter,sans-serif;color:#eee;background:#121213;min-height:100vh">Игра доступна в обычные дни. Заходите в понедельник, среду или пятницу только если готовы к 18+.</main>';
+      '<main style="padding:2rem;font-family:Inter,sans-serif;color:#eee;background:#121213;min-height:100vh">Игра доступна в классические дни без 18+. В мем-дни зайдите с подтверждением возраста.</main>';
   });
 
   await boot();
@@ -510,18 +590,32 @@ async function start(): Promise<void> {
 async function boot(): Promise<void> {
   try {
     const dicts = await loadDictionaries();
-    const pools = buildWordPools(dicts.normal, dicts.profanity);
+    const pools = buildWordPools(
+      dicts.normal,
+      dicts.bundle,
+      dicts.guessOnlyProfanity,
+      dicts.guessExtended,
+    );
     const dateKey = getMoscowDateKey();
-    const profanity = isProfanityDay();
+    const classic = isClassicDay(dateKey);
 
-    if (profanity && !isAdultConfirmed()) {
+    if (!classic && !isAdultConfirmed()) {
       ageGateEl.classList.remove("hidden");
-      subtitleEl.textContent = `${formatDateRu(dateKey)} · подтвердите возраст`;
+      subtitleEl.textContent = "Подтвердите возраст";
       return;
     }
 
-    const puzzle = pickDailyWord(dateKey, profanity, pools);
-    initGame(puzzle, pools);
+    const puzzle = pickDailyWord(dateKey, pools);
+    initGame(puzzle, pools, dicts.lexicon);
+
+    if (import.meta.env.DEV) {
+      const sizes = ([5, 6, 7, 8] as const).map(
+        (n) => `${n}:${pools[n].guess.size}`,
+      );
+      console.info(
+        `[huerdli] слово дня: ${puzzle.length} букв, пулы ввода — ${sizes.join(", ")}`,
+      );
+    }
   } catch (error) {
     subtitleEl.textContent = "Ошибка загрузки";
     setMessage(error instanceof Error ? error.message : "Неизвестная ошибка", "error");
@@ -533,12 +627,24 @@ start();
 // Для отладки: window.__HUERDLI__
 declare global {
   interface Window {
-    __HUERDLI__?: { puzzle: DailyPuzzle };
+    __HUERDLI__?: {
+      puzzle: DailyPuzzle;
+      guessPoolSize: number;
+      canGuess: (word: string) => boolean;
+    };
   }
 }
 
 Object.defineProperty(window, "__HUERDLI__", {
   get() {
-    return game ? { puzzle: game.puzzle } : undefined;
+    if (!game) return undefined;
+    return {
+      puzzle: game.puzzle,
+      guessPoolSize: game.pools[game.puzzle.length].guess.size,
+      canGuess(word: string) {
+        const w = toDisplay(word);
+        return game.pools[game.puzzle.length].guess.has(w);
+      },
+    };
   },
 });

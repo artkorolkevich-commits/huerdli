@@ -37,14 +37,51 @@ npm run dev
 Игра использует словари для 5 и 6 букв:
 
 - `ru-nouns-{5,6}.txt`
-- `ru-profanity-nouns-{5,6}.txt` — **179 слов** (103 + 76), только кириллица
+- `ru-profanity-nouns-{5,6}.txt` — матовые дни (Пн / Ср / Пт), только кириллица
+- `ru-dvach-nouns-{5,6}.txt` — словарь двача / рунета (**307 слов**, 147 + 160)
 
-Список матовых слов редактируется в `scripts/profanity_curated_data.py`, затем:
+### Правила отбора слов
+
+Каждое слово должно быть **реальной единицей русской лексики** с понятным
+смыслом — его можно объяснить, даже если оно редкое или грубое. Мат и
+нейтральная лексика проходят одни и те же критерии качества.
+
+Полный текст правил: [`scripts/word_rules.py`](scripts/word_rules.py)
+(константа `DICTIONARY_RULES`).
+
+Кратко:
+
+- только кириллица, 5–6 букв (Ё → Е);
+- существительное, не обрывок и не имя собственное;
+- обычный словарь: Harrix/Russian-Nouns + морфологический фильтр;
+- матовый словарь: ручной curated-список без обрезанных форм
+  (`долбо`, `подон`, `шалав` и т.п.);
+- двач-словарь: Неолурк + бордословарь + ручной seed, см. ниже.
+
+Матовый список редактируется в `scripts/profanity_curated_data.py`, затем:
 
 ```bash
 .venv/bin/python scripts/build_dictionaries.py
 npm run dict:sync
 ```
+
+### Словарь двача (`ru-dvach-nouns-*.txt`)
+
+Собирается скриптом `scripts/collect_dvach_words.py` из:
+
+- заголовков статей [Неолурка](https://lurkmore.org/) (мемы, имиджборды, рунет);
+- поиска по Neolurk API;
+- ручного seed (двачевский сленг, бордословарь, интернет-лексика).
+
+Минимум **300** слов (5 + 6 букв). Пересборка:
+
+```bash
+.venv/bin/python scripts/collect_dvach_words.py   # обновить dvach_curated_data.py
+.venv/bin/python scripts/build_dictionaries.py
+npm run dict:sync
+```
+
+Список хранится в `scripts/dvach_curated_data.py`.
 
 ## Сборка
 
