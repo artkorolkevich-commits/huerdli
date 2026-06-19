@@ -156,8 +156,7 @@ function collapseWordExplainer(): void {
 function renderWordExplainer(word: string): void {
   const entry = getWordEntry(game.lexicon, word);
   if (!entry) {
-    modalExplainerDefinitionEl.textContent =
-      "Слово из классического словаря — краткого объяснения пока нет.";
+    modalExplainerDefinitionEl.textContent = "Краткого объяснения пока нет.";
     modalExplainerExampleEl.textContent = "";
     modalExplainerExampleEl.classList.add("hidden");
     modalExplainerFigureEl.classList.add("hidden");
@@ -581,7 +580,7 @@ async function start(): Promise<void> {
 
   ageNoEl.addEventListener("click", () => {
     document.body.innerHTML =
-      '<main style="padding:2rem;font-family:Inter,sans-serif;color:#eee;background:#121213;min-height:100vh">Игра доступна в классические дни без 18+. В мем-дни зайдите с подтверждением возраста.</main>';
+      '<main style="padding:2rem;font-family:Inter,sans-serif;color:#eee;background:#121213;min-height:100vh"></main>';
   });
 
   await boot();
@@ -601,7 +600,7 @@ async function boot(): Promise<void> {
 
     if (!classic && !isAdultConfirmed()) {
       ageGateEl.classList.remove("hidden");
-      subtitleEl.textContent = "Подтвердите возраст";
+      subtitleEl.textContent = "";
       return;
     }
 

@@ -449,6 +449,10 @@ main {
   .key:active {
     transform: none;
   }
+
+  .explainer-btn-icon-only .explainer-btn-mark {
+    animation: none;
+  }
 }
 
 .key:focus-visible {
@@ -562,6 +566,28 @@ main {
   line-height: 1;
   text-align: center;
   transform: translateY(-1px);
+}
+
+.explainer-btn-icon-only:not([aria-expanded="true"]) .explainer-btn-mark {
+  animation: explainer-blink 1.2s ease-in-out infinite;
+}
+
+.explainer-btn-icon-only:hover .explainer-btn-mark,
+.explainer-btn-icon-only:focus-visible .explainer-btn-mark,
+.explainer-btn-icon-only[aria-expanded="true"] .explainer-btn-mark {
+  animation: none;
+  opacity: 1;
+}
+
+@keyframes explainer-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
 }
 
 .explainer-btn-icon-only:hover {
