@@ -20,6 +20,7 @@ sys.path.insert(0, str(SCRIPTS))
 
 from dvach_curated_data import CURATED_DVACH_NOUNS  # noqa: E402
 from profanity_curated_data import CURATED_PROFANITY_NOUNS  # noqa: E402
+from profanity_definitions import PROFANITY_DEFINITIONS  # noqa: E402
 from word_rules import normalize  # noqa: E402
 from meme_review_overrides import (  # noqa: E402
     MEME_NEOLURK_TITLE_MAP,
@@ -57,6 +58,61 @@ def load_title_index() -> dict[str, str]:
 def clean_html(text: str) -> str:
     text = unescape(STRIP_RE.sub("", text))
     return re.sub(r"\s+", " ", text).strip()
+
+
+def enrichment_matches_word(word: str, text: str | None, title: str | None) -> bool:
+    w = normalize(word)
+    if not text and not title:
+        return True
+    if title and normalize(title) == w:
+        return True
+    return w in normalize(text or "")
+
+
+def article_fits_word(word: str, article: dict) -> bool:
+    return enrichment_matches_word(word, article.get("extract"), article.get("title"))
+
+
+def mat_usage_example(word: str) -> dict[str, str | None]:
+    definition = PROFANITY_DEFINITIONS.get(word)
+    if not definition:
+        return {}
+    return {
+        "example": f"«{word}» — {definition}",
+        "example_source": None,
+        "example_title": None,
+        "image": None,
+        "image_source": None,
+    }
+
+
+def sanitize_enrichment(
+    word: str, entry: dict, *, is_mat: bool, is_dvach: bool
+) -> dict[str, str | None]:
+    entry = dict(entry)
+    override = MEME_REVIEW_OVERRIDES.get(word, {})
+
+    example = entry.get("example")
+    title = entry.get("example_title")
+    if is_mat:
+        if example and not enrichment_matches_word(word, example, title):
+            if override.get("example"):
+                entry["example"] = override["example"]
+            else:
+                entry.update(mat_usage_example(word))
+        elif not example:
+            entry.update(mat_usage_example(word))
+        entry["example_source"] = None
+        entry["example_title"] = None
+
+    if is_mat and not is_dvach:
+        entry["image"] = None
+        entry["image_source"] = None
+    elif override.get("image"):
+        entry["image"] = override["image"]
+        entry["image_source"] = override.get("image_source")
+
+    return entry
 
 
 def first_sentence(text: str, limit: int = 220) -> str:
@@ -207,20 +263,23 @@ def enrich_word(word: str, *, dvach: bool, title_index: dict[str, str]) -> dict:
             break
 
     if article and article.get("extract"):
-        entry["example"] = first_sentence(article["extract"])
-        entry["example_source"] = article["url"]
-        entry["example_title"] = article["title"]
-        if dvach and article.get("image"):
-            entry["image"] = article["image"]
-            entry["image_source"] = article["url"]
-        return apply_overrides(word, entry, dvach=dvach)
+        use_article = article_fits_word(word, article) or word not in CURATED_PROFANITY_NOUNS
+        if use_article:
+            entry["example"] = first_sentence(article["extract"])
+            entry["example_source"] = article["url"]
+            entry["example_title"] = article["title"]
+            if dvach and article.get("image"):
+                entry["image"] = article["image"]
+                entry["image_source"] = article["url"]
+            return apply_overrides(word, entry, dvach=dvach)
 
     search = fetch_search_snippet(word)
     time.sleep(0.08)
     if search and search.get("snippet"):
-        entry["example"] = first_sentence(search["snippet"])
-        entry["example_source"] = search["url"]
-        entry["example_title"] = search["title"]
+        if enrichment_matches_word(word, search["snippet"], search["title"]) or word not in CURATED_PROFANITY_NOUNS:
+            entry["example"] = first_sentence(search["snippet"])
+            entry["example_source"] = search["url"]
+            entry["example_title"] = search["title"]
 
     if not entry.get("example"):
         related = MEME_RELATED_NEOLURK_SEARCH.get(word)
@@ -234,6 +293,11 @@ def enrich_word(word: str, *, dvach: bool, title_index: dict[str, str]) -> dict:
                 if dvach and article.get("image") and not entry.get("image"):
                     entry["image"] = article["image"]
                     entry["image_source"] = article["url"]
+
+    if word in CURATED_PROFANITY_NOUNS and not enrichment_matches_word(
+        word, entry.get("example"), entry.get("example_title")
+    ):
+        entry.update(mat_usage_example(word))
 
     return apply_overrides(word, entry, dvach=dvach)
 

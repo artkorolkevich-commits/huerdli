@@ -14,7 +14,7 @@ from dvach_curated_data import CURATED_DVACH_NOUNS  # noqa: E402
 from dvach_definitions import DVACH_DEFINITIONS, missing_definitions as missing_dvach  # noqa: E402
 from profanity_curated_data import CURATED_PROFANITY_NOUNS  # noqa: E402
 from profanity_definitions import PROFANITY_DEFINITIONS, missing_definitions as missing_mat  # noqa: E402
-from word_review_enrichment import CACHE_PATH, load_enrichment  # noqa: E402
+from word_review_enrichment import CACHE_PATH, load_enrichment, sanitize_enrichment  # noqa: E402
 
 OUT_HTML = ROOT / "public" / "profanity-review.html"
 OUT_MD = ROOT / "sources" / "dictionary-review-with-definitions.md"
@@ -45,7 +45,12 @@ def word_entries(enrichment: dict[str, dict]) -> list[dict[str, str | int | list
             if dv not in defs:
                 defs.append(dv)
 
-        extra = enrichment.get(word, {})
+        extra = sanitize_enrichment(
+            word,
+            enrichment.get(word, {}),
+            is_mat="mat" in sources,
+            is_dvach="dvach" in sources,
+        )
         image = extra.get("image")
 
         rows.append(

@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "generated_at": "2026-06-18T14:28:32.212940+00:00",
+  "generated_at": "2026-06-19T05:11:38.004431+00:00",
   "stats": {
     "total_words": 566,
     "mat_words": 161,
     "dvach_words": 440,
     "overlap": 35,
-    "with_example": 536,
-    "with_image": 425
+    "with_example": 554,
+    "with_image": 406
   },
   "word_lists": {
     "mat_only": [
@@ -800,8 +800,8 @@
       ],
       "definition": "Оскорбление: тупой человек (образ барана).",
       "example": "Баран — мощное травоядное животное, обладающее не менее мощными рогами.",
-      "example_source": "https://lurkmore.org/wiki/%D0%91%D0%B0%D1%80%D0%B0%D0%BD",
-      "example_title": "Баран",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -864,7 +864,7 @@
         "mat"
       ],
       "definition": "Редкое грубое слово о пуке, метеоризме.",
-      "example": null,
+      "example": "«бздех» — Редкое грубое слово о пуке, метеоризме.",
       "example_source": null,
       "example_title": null,
       "image": null,
@@ -878,8 +878,8 @@
       ],
       "definition": "Тот, кто часто пукает; грубое прозвище.",
       "example": "Бздун (он же бсдшник, BSDун) — пользователь одной из открытых ОС семейства *BSD (FreeBSD, OpenBSD, NetBSD, DragonFlyBSD).",
-      "example_source": "https://lurkmore.org/wiki/%D0%91%D0%B7%D0%B4%D1%83%D0%BD",
-      "example_title": "Бздун",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -995,9 +995,9 @@
         "dvach"
       ],
       "definition": "Уменьшительно-грубое оскорбление женщины. / Уменьшительно-грубое; пренебрежительное оскорбление.",
-      "example": "World of Tanks/Троллинг",
-      "example_source": "https://lurkmore.org/wiki/World_of_Tanks/%D0%A2%D1%80%D0%BE%D0%BB%D0%BB%D0%B8%D0%BD%D0%B3",
-      "example_title": "World of Tanks/Троллинг",
+      "example": "«блядка» — Уменьшительно-грубое оскорбление женщины.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -1008,9 +1008,9 @@
         "mat"
       ],
       "definition": "Мужчина, ведущий распутный образ жизни; грубое слово.",
-      "example": "Рабыня Изаура",
-      "example_source": "https://lurkmore.org/wiki/%D0%A0%D0%B0%D0%B1%D1%8B%D0%BD%D1%8F_%D0%98%D0%B7%D0%B0%D1%83%D1%80%D0%B0",
-      "example_title": "Рабыня Изаура",
+      "example": "«блядун» — Мужчина, ведущий распутный образ жизни; грубое слово.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -1023,8 +1023,8 @@
       ],
       "definition": "Базовое матерное ругательство русского языка. / Матерное ругательство, одно из самых частых в рунете.",
       "example": "Блядь (сокращённо бля) — многозначное ругательное слово в русском языке.",
-      "example_source": "https://lurkmore.org/wiki/%D0%91%D0%BB%D1%8F%D0%B4%D1%8C",
-      "example_title": "Блядь",
+      "example_source": null,
+      "example_title": null,
       "image": "https://neolurk.org/w/images/3/3a/QUESTION.JPG",
       "image_source": "https://lurkmore.org/wiki/%D0%91%D0%BB%D1%8F%D0%B4%D1%8C"
     },
@@ -1036,8 +1036,8 @@
       ],
       "definition": "Эвфемизм/междометие вместо «блядь».",
       "example": "Бляха муха",
-      "example_source": "https://lurkmore.org/wiki/%D0%91%D0%BB%D1%8F%D1%85%D0%B0_%D0%BC%D1%83%D1%85%D0%B0",
-      "example_title": "Бляха муха",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -1061,9 +1061,9 @@
         "mat"
       ],
       "definition": "Оскорбление: глупый, бестолковый человек.",
-      "example": "Нот-Йидик",
-      "example_source": "https://lurkmore.org/wiki/%D0%9D%D0%BE%D1%82-%D0%99%D0%B8%D0%B4%D0%B8%D0%BA",
-      "example_title": "Нот-Йидик",
+      "example": "«болван» — Оскорбление: глупый, бестолковый человек.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -1087,11 +1087,11 @@
         "mat"
       ],
       "definition": "Сленговое оскорбление: глупый, неуклюжий мужчина.",
-      "example": "Кабан — дикая хрюкалка, обитатель ручьёв, генерал грибного дела.",
-      "example_source": "https://lurkmore.org/wiki/%D0%9A%D0%B0%D0%B1%D0%B0%D0%BD",
-      "example_title": "Кабан",
-      "image": "https://neolurk.org/w/images/c/cf/Bebrock.jpg",
-      "image_source": "https://lurkmore.org/wiki/%D0%A7%D0%B5%D1%80%D0%B5%D0%BF%D0%B0%D1%88%D0%BA%D0%B8-%D0%BD%D0%B8%D0%BD%D0%B4%D0%B7%D1%8F"
+      "example": "«боров» — Сленговое оскорбление: глупый, неуклюжий мужчина.",
+      "example_source": null,
+      "example_title": null,
+      "image": null,
+      "image_source": null
     },
     {
       "word": "ботнет",
@@ -1192,8 +1192,8 @@
       ],
       "definition": "Презрительное: невежественная, низкая масса людей.",
       "example": "Быдло (пшецк. bydło — скот) — люди, которые по личным качествам недалеко ушли от домашнего скота.",
-      "example_source": "https://lurkmore.org/wiki/%D0%91%D1%8B%D0%B4%D0%BB%D0%BE",
-      "example_title": "Быдло",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -1399,7 +1399,7 @@
         "mat"
       ],
       "definition": "Оскорбление: вонючий, неприятный человек.",
-      "example": null,
+      "example": "«вонюга» — Оскорбление: вонючий, неприятный человек.",
       "example_source": null,
       "example_title": null,
       "image": null,
@@ -1412,7 +1412,7 @@
         "mat"
       ],
       "definition": "Оскорбление: подлый, «вшивый» человек.",
-      "example": null,
+      "example": "«вшивец» — Оскорбление: подлый, «вшивый» человек.",
       "example_source": null,
       "example_title": null,
       "image": null,
@@ -1438,9 +1438,9 @@
         "mat"
       ],
       "definition": "Грубое: наглая выходка, хамское поведение.",
-      "example": "Понт (чуть менее, чем всегда употребляется во множественном числе, понты́) — средство для получения доминантного положения как среди небыдла, так и быдла, или как минимум для самоудовлетворения ЧСВ.",
-      "example_source": "https://lurkmore.org/wiki/%D0%9F%D0%BE%D0%BD%D1%82",
-      "example_title": "Понт",
+      "example": "«выебон» — Грубое: наглая выходка, хамское поведение.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -1451,9 +1451,9 @@
         "mat"
       ],
       "definition": "Оскорбление: мерзкий, подлый человек.",
-      "example": "Стражник сторожит стену",
-      "example_source": "https://lurkmore.org/wiki/%D0%A1%D1%82%D1%80%D0%B0%D0%B6%D0%BD%D0%B8%D0%BA_%D1%81%D1%82%D0%BE%D1%80%D0%BE%D0%B6%D0%B8%D1%82_%D1%81%D1%82%D0%B5%D0%BD%D1%83",
-      "example_title": "Стражник сторожит стену",
+      "example": "«гадина» — Оскорбление: мерзкий, подлый человек.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -1477,11 +1477,11 @@
         "mat"
       ],
       "definition": "Грубое: презерватив; переносно — подлец.",
-      "example": "ПрезервативЪ (груз. გდ, он же гондон, от кондом, что, в свою очередь, происходит от фамилии Кондом, принадлежащей изобретателю, поэтому писать слово «гондон» через «а» есть преступление) — резиновое изделие для…",
-      "example_source": "https://lurkmore.org/wiki/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D1%80%D0%B2%D0%B0%D1%82%D0%B8%D0%B2",
-      "example_title": "Презерватив",
-      "image": "https://neolurk.org/w/images/7/7f/Sert_condom.jpg",
-      "image_source": "https://lurkmore.org/wiki/%D0%93%D0%BE%D0%BD%D0%B4%D0%BE%D0%BD"
+      "example": "«гандон» — Грубое: презерватив; переносно — подлец.",
+      "example_source": null,
+      "example_title": null,
+      "image": null,
+      "image_source": null
     },
     {
       "word": "гачик",
@@ -1635,8 +1635,8 @@
       ],
       "definition": "Оскорбление: подлый, мерзкий человек.",
       "example": "Советский человек — гнида и сволочь",
-      "example_source": "https://lurkmore.org/wiki/%D0%A1%D0%BE%D0%B2%D0%B5%D1%82%D1%81%D0%BA%D0%B8%D0%B9_%D1%87%D0%B5%D0%BB%D0%BE%D0%B2%D0%B5%D0%BA_%E2%80%94_%D0%B3%D0%BD%D0%B8%D0%B4%D0%B0_%D0%B8_%D1%81%D0%B2%D0%BE%D0%BB%D0%BE%D1%87%D1%8C",
-      "example_title": "Советский человек — гнида и сволочь",
+      "example_source": null,
+      "example_title": null,
       "image": "https://neolurk.org/w/images/3/34/Photo_55.jpg",
       "image_source": "https://lurkmore.org/wiki/%D0%A1%D0%BE%D0%B2%D0%B5%D1%82%D1%81%D0%BA%D0%B8%D0%B9_%D1%87%D0%B5%D0%BB%D0%BE%D0%B2%D0%B5%D0%BA_%E2%80%94_%D0%B3%D0%BD%D0%B8%D0%B4%D0%B0_%D0%B8_%D1%81%D0%B2%D0%BE%D0%BB%D0%BE%D1%87%D1%8C"
     },
@@ -1648,8 +1648,8 @@
       ],
       "definition": "Тот, кто «гнилой»; подлый, испорченный человек.",
       "example": "Гнилец — монстр из вселенной Ведьмака. Представляет собой довольно отвратительное чудовище, которые являются падальщиками и питаются людьми.",
-      "example_source": "https://lurkmore.org/wiki/%D0%93%D0%BD%D0%B8%D0%BB%D0%B5%D1%86",
-      "example_title": "Гнилец",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -1661,8 +1661,8 @@
       ],
       "definition": "Гниющая масса; переносно — моральная гадость.",
       "example": "Зелёная Гниль",
-      "example_source": "https://lurkmore.org/wiki/%D0%97%D0%B5%D0%BB%D1%91%D0%BD%D0%B0%D1%8F_%D0%93%D0%BD%D0%B8%D0%BB%D1%8C",
-      "example_title": "Зелёная Гниль",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -1688,8 +1688,8 @@
       ],
       "definition": "Фекалии; грубо о чём-то ужасном и некачественном. / Грубое слово; что-то плохое, некачественное.",
       "example": "Говно (надм. дерьмо, офиц.-канц.",
-      "example_source": "https://lurkmore.org/wiki/%D0%93%D0%BE%D0%B2%D0%BD%D0%BE",
-      "example_title": "Говно",
+      "example_source": null,
+      "example_title": null,
       "image": "https://neolurk.org/w/images/a/a9/Motivator-govno2.jpg",
       "image_source": "https://lurkmore.org/wiki/%D0%93%D0%BE%D0%B2%D0%BD%D0%BE"
     },
@@ -1779,9 +1779,9 @@
         "dvach"
       ],
       "definition": "Пренебрежительное: подлец, «говняный» человек.",
-      "example": "Каламбара",
-      "example_source": "https://lurkmore.org/wiki/%D0%9A%D0%B0%D0%BB%D0%B0%D0%BC%D0%B1%D0%B0%D1%80%D0%B0",
-      "example_title": "Каламбара",
+      "example": "«говнюк» — Пренебрежительное: подлец, «говняный» человек.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -1806,8 +1806,8 @@
       ],
       "definition": "Грубое оскорбительное слово о гомосексуале.",
       "example": "Гомик (Homique) — сокращенное название гомосексуалиста, призвано отметить тот факт, что гомик не совсем в себе.",
-      "example_source": "https://lurkmore.org/wiki/%D0%93%D0%BE%D0%BC%D0%B8%D0%BA",
-      "example_title": "Гомик",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -1832,10 +1832,10 @@
       ],
       "definition": "Презерватив; переносно — идиот, подлец.",
       "example": "ПрезервативЪ (груз. გდ, он же гондон, от кондом, что, в свою очередь, происходит от фамилии Кондом, принадлежащей изобретателю, поэтому писать слово «гондон» через «а» есть преступление) — резиновое изделие для…",
-      "example_source": "https://lurkmore.org/wiki/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D1%80%D0%B2%D0%B0%D1%82%D0%B8%D0%B2",
-      "example_title": "Презерватив",
-      "image": "https://neolurk.org/w/images/7/7f/Sert_condom.jpg",
-      "image_source": "https://lurkmore.org/wiki/%D0%93%D0%BE%D0%BD%D0%B4%D0%BE%D0%BD"
+      "example_source": null,
+      "example_title": null,
+      "image": null,
+      "image_source": null
     },
     {
       "word": "госсрач",
@@ -1976,8 +1976,8 @@
       ],
       "definition": "Оскорбление: глупый человек. / Оскорбление: глупый человек (от «дебил» в мед. смысле, в быту — ругательство).",
       "example": "Дебил — специальная категория людей, обладающих крайне низкими интеллектуальными способностями.",
-      "example_source": "https://lurkmore.org/wiki/%D0%94%D0%B5%D0%B1%D0%B8%D0%BB",
-      "example_title": "Дебил",
+      "example_source": null,
+      "example_title": null,
       "image": "https://neolurk.org/w/images/8/8c/%D0%9C%D1%8D%D0%B4%D0%94%D0%B5%D0%B1%D0%B8%D0%BB.jpg",
       "image_source": "https://lurkmore.org/wiki/%D0%94%D0%B5%D0%B1%D0%B8%D0%BB"
     },
@@ -2041,10 +2041,10 @@
       ],
       "definition": "Фекалии; грубо о чём-то плохом.",
       "example": "Говно (надм. дерьмо, офиц.-канц.",
-      "example_source": "https://lurkmore.org/wiki/%D0%93%D0%BE%D0%B2%D0%BD%D0%BE",
-      "example_title": "Говно",
-      "image": "https://neolurk.org/w/images/a/a9/Motivator-govno2.jpg",
-      "image_source": "https://lurkmore.org/wiki/%D0%93%D0%BE%D0%B2%D0%BD%D0%BE"
+      "example_source": null,
+      "example_title": null,
+      "image": null,
+      "image_source": null
     },
     {
       "word": "дипфейк",
@@ -2107,8 +2107,8 @@
       ],
       "definition": "Оскорбление: глупый, неуклюжий парень.",
       "example": "Додик (дод, додсон) — физически неразвитый, забитый лох, оскорбление.",
-      "example_source": "https://lurkmore.org/wiki/%D0%94%D0%BE%D0%B4%D0%B8%D0%BA",
-      "example_title": "Додик",
+      "example_source": null,
+      "example_title": null,
       "image": "https://neolurk.org/w/images/9/9a/Djqualls3454.jpg",
       "image_source": "https://lurkmore.org/wiki/%D0%94%D0%BE%D0%B4%D0%B8%D0%BA"
     },
@@ -2120,10 +2120,10 @@
       ],
       "definition": "Грубый сленг: половой акт (метафора).",
       "example": "В сетевом сленге «дойка» — грубая сексуальная метафора; в мемах чаще встречается буквальная дойка коровы как абсурдная картинка.",
-      "example_source": "https://lurkmore.org/wiki/%D0%9A%D0%BE%D1%80%D0%BE%D0%B2%D0%B0",
-      "example_title": "Корова",
-      "image": "https://neolurk.org/w/images/5/51/%D0%97%D0%B2%D0%B5%D1%80%D1%83%D1%88%D0%BA%D0%B0.jpg",
-      "image_source": "https://lurkmore.org/wiki/%D0%9A%D0%BE%D1%80%D0%BE%D0%B2%D0%B0"
+      "example_source": null,
+      "example_title": null,
+      "image": null,
+      "image_source": null
     },
     {
       "word": "доксер",
@@ -2172,8 +2172,8 @@
       ],
       "definition": "Тот, кто мастурбирует; грубое прозвище.",
       "example": "Дрочер\n\nЧеловек (чаще — школота) тонкой душевной организации, потерпевший много неудач на фронте коитуса или имеющий о том искажённое представление.",
-      "example_source": "https://lurkmore.org/wiki/%D0%94%D1%80%D0%BE%D1%87%D0%B5%D1%80",
-      "example_title": "Дрочер",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -2185,8 +2185,8 @@
       ],
       "definition": "Мастурбация (грубый сленг).",
       "example": "Онанизм (мастурбация, дрочка) — очень популярное занятие множества людей, которых называют дрочерами.",
-      "example_source": "https://lurkmore.org/wiki/%D0%9E%D0%BD%D0%B0%D0%BD%D0%B8%D0%B7%D0%BC",
-      "example_title": "Онанизм",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -2197,9 +2197,9 @@
         "mat"
       ],
       "definition": "Скверная, негодная вещь или человек.",
-      "example": "Краснофашистская Россия",
-      "example_source": "https://lurkmore.org/wiki/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D1%84%D0%B0%D1%88%D0%B8%D1%81%D1%82%D1%81%D0%BA%D0%B0%D1%8F_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F",
-      "example_title": "Краснофашистская Россия",
+      "example": "«дрянь» — Скверная, негодная вещь или человек.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -2211,10 +2211,10 @@
       ],
       "definition": "Грубо: анальное отверстие.",
       "example": "Дупло — дыра в дереве. В естественных условиях дупла образуются или из-за гниения погибших деревьев, или из-за выдалбливания птицами или поедания насекомыми.",
-      "example_source": "https://lurkmore.org/wiki/%D0%94%D1%83%D0%BF%D0%BB%D0%BE",
-      "example_title": "Дупло",
-      "image": "https://neolurk.org/w/images/e/e6/403132_1.jpg",
-      "image_source": "https://lurkmore.org/wiki/%D0%94%D1%83%D0%BF%D0%BB%D0%BE"
+      "example_source": null,
+      "example_title": null,
+      "image": null,
+      "image_source": null
     },
     {
       "word": "дурак",
@@ -2224,11 +2224,11 @@
         "dvach"
       ],
       "definition": "Оскорбление: глупый человек.",
-      "example": "Статья сия есть продукт распила огромной статьи про дворовые игры.",
-      "example_source": "https://lurkmore.org/wiki/%D0%94%D0%B2%D0%BE%D1%80%D0%BE%D0%B2%D1%8B%D0%B5_%D0%B8%D0%B3%D1%80%D1%8B/%D0%98%D0%B3%D1%80%D1%8B_%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BD%D1%8B%D0%B5",
-      "example_title": "Дворовые игры/Игры карточные",
-      "image": "https://neolurk.org/w/images/6/65/Afgan.jpg",
-      "image_source": "https://lurkmore.org/wiki/Google_%D0%B4%D1%83%D1%80%D0%B0%D0%BA"
+      "example": "«дурак» — Оскорбление: глупый человек.",
+      "example_source": null,
+      "example_title": null,
+      "image": null,
+      "image_source": null
     },
     {
       "word": "ебало",
@@ -2238,10 +2238,10 @@
       ],
       "definition": "Грубое: лицо.",
       "example": "Я тебе щас ебало начищу",
-      "example_source": "https://lurkmore.org/wiki/%D0%AF_%D1%82%D0%B5%D0%B1%D0%B5_%D1%89%D0%B0%D1%81_%D0%B5%D0%B1%D0%B0%D0%BB%D0%BE_%D0%BD%D0%B0%D1%87%D0%B8%D1%89%D1%83",
-      "example_title": "Я тебе щас ебало начищу",
-      "image": "https://neolurk.org/w/images/e/e9/Zhirobas.jpg",
-      "image_source": "https://lurkmore.org/wiki/%D0%96%D0%B8%D1%80%D0%BE%D0%B1%D0%B0%D1%81"
+      "example_source": null,
+      "example_title": null,
+      "image": null,
+      "image_source": null
     },
     {
       "word": "ебанат",
@@ -2250,9 +2250,9 @@
         "mat"
       ],
       "definition": "Крайне грубое: дурак, «ёбнутый» человек.",
-      "example": "Роман Кибукевич",
-      "example_source": "https://lurkmore.org/wiki/%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD_%D0%9A%D0%B8%D0%B1%D1%83%D0%BA%D0%B5%D0%B2%D0%B8%D1%87",
-      "example_title": "Роман Кибукевич",
+      "example": "«ебанат» — Крайне грубое: дурак, «ёбнутый» человек.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -2263,9 +2263,9 @@
         "mat"
       ],
       "definition": "Редкое грубое сленговое слово (корень «еб»).",
-      "example": "Саша Скул",
-      "example_source": "https://lurkmore.org/wiki/%D0%A1%D0%B0%D1%88%D0%B0_%D0%A1%D0%BA%D1%83%D0%BB",
-      "example_title": "Саша Скул",
+      "example": "«ебень» — Редкое грубое сленговое слово (корень «еб»).",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -2276,9 +2276,9 @@
         "mat"
       ],
       "definition": "Оскорбление: идиот, дебил.",
-      "example": "Умственно-отсталый (рас. американск.",
-      "example_source": "https://lurkmore.org/wiki/%D0%A3%D0%BC%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE-%D0%BE%D1%82%D1%81%D1%82%D0%B0%D0%BB%D1%8B%D0%B9",
-      "example_title": "Умственно-отсталый",
+      "example": "«еблан» — Оскорбление: идиот, дебил.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -2289,9 +2289,9 @@
         "mat"
       ],
       "definition": "Суета, кутерьма; грубое описание хаоса.",
-      "example": "Ня",
-      "example_source": "https://lurkmore.org/wiki/%D0%9D%D1%8F",
-      "example_title": "Ня",
+      "example": "«еботня» — Суета, кутерьма; грубое описание хаоса.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -2302,9 +2302,9 @@
         "mat"
       ],
       "definition": "Редкое игривое грубое слово на корне «еб».",
-      "example": "Алоис/HarshLois",
-      "example_source": "https://lurkmore.org/wiki/%D0%90%D0%BB%D0%BE%D0%B8%D1%81/HarshLois",
-      "example_title": "Алоис/HarshLois",
+      "example": "«ебырь» — Редкое игривое грубое слово на корне «еб».",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -2328,9 +2328,9 @@
         "mat"
       ],
       "definition": "Грубое сленговое: половой член.",
-      "example": "Консулы. Начало",
-      "example_source": "https://lurkmore.org/wiki/%D0%9A%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8B._%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE",
-      "example_title": "Консулы. Начало",
+      "example": "«елдак» — Грубое сленговое: половой член.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -2354,11 +2354,11 @@
         "mat"
       ],
       "definition": "Оскорбление: очень полный человек.",
-      "example": "Ожирение — это состояние тролля, при котором тонкий троллинг быстро переходит в толстый по причине нетерпеливости или привыкания к троллингу аки к веществам.",
-      "example_source": "https://lurkmore.org/wiki/%D0%9E%D0%B6%D0%B8%D1%80%D0%B5%D0%BD%D0%B8%D0%B5",
-      "example_title": "Ожирение",
-      "image": "https://neolurk.org/w/images/e/e9/Zhirobas.jpg",
-      "image_source": "https://lurkmore.org/wiki/%D0%96%D0%B8%D1%80%D0%BE%D0%B1%D0%B0%D1%81"
+      "example": "«жирдяй» — Оскорбление: очень полный человек.",
+      "example_source": null,
+      "example_title": null,
+      "image": null,
+      "image_source": null
     },
     {
       "word": "жирик",
@@ -2393,9 +2393,9 @@
         "mat"
       ],
       "definition": "Уменьшительно-грубое: задница.",
-      "example": "Академовские маньяки",
-      "example_source": "https://lurkmore.org/wiki/%D0%90%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B5_%D0%BC%D0%B0%D0%BD%D1%8C%D1%8F%D0%BA%D0%B8",
-      "example_title": "Академовские маньяки",
+      "example": "«жопец» — Уменьшительно-грубое: задница.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -2406,9 +2406,9 @@
         "mat"
       ],
       "definition": "Увеличительное грубо: огромная задница.",
-      "example": "Старая копипаста:Пиздоблядское мудоёбище",
-      "example_source": "https://lurkmore.org/wiki/%D0%A1%D1%82%D0%B0%D1%80%D0%B0%D1%8F_%D0%BA%D0%BE%D0%BF%D0%B8%D0%BF%D0%B0%D1%81%D1%82%D0%B0%3A%D0%9F%D0%B8%D0%B7%D0%B4%D0%BE%D0%B1%D0%BB%D1%8F%D0%B4%D1%81%D0%BA%D0%BE%D0%B5_%D0%BC%D1%83%D0%B4%D0%BE%D1%91%D0%B1%D0%B8%D1%89%D0%B5",
-      "example_title": "Старая копипаста:Пиздоблядское мудоёбище",
+      "example": "«жопища» — Увеличительное грубо: огромная задница.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -2419,9 +2419,9 @@
         "mat"
       ],
       "definition": "Уменьшительно-грубое: задница.",
-      "example": "Селфи",
-      "example_source": "https://lurkmore.org/wiki/%D0%A1%D0%B5%D0%BB%D1%84%D0%B8",
-      "example_title": "Селфи",
+      "example": "«жопка» — Уменьшительно-грубое: задница.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -2432,9 +2432,9 @@
         "mat"
       ],
       "definition": "Грубое: задница или тупой человек.",
-      "example": "Конкурс ЧИП",
-      "example_source": "https://lurkmore.org/wiki/%D0%9A%D0%BE%D0%BD%D0%BA%D1%83%D1%80%D1%81_%D0%A7%D0%98%D0%9F",
-      "example_title": "Конкурс ЧИП",
+      "example": "«жопник» — Грубое: задница или тупой человек.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -2445,9 +2445,9 @@
         "mat"
       ],
       "definition": "Грубое: глубокий оральный секс.",
-      "example": "Империя — это красиво",
-      "example_source": "https://lurkmore.org/wiki/%D0%98%D0%BC%D0%BF%D0%B5%D1%80%D0%B8%D1%8F_%E2%80%94_%D1%8D%D1%82%D0%BE_%D0%BA%D1%80%D0%B0%D1%81%D0%B8%D0%B2%D0%BE",
-      "example_title": "Империя — это красиво",
+      "example": "«заглот» — Грубое: глубокий оральный секс.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -2471,9 +2471,9 @@
         "mat"
       ],
       "definition": "Разговорное грубое: задница.",
-      "example": "Псевдонатурал",
-      "example_source": "https://lurkmore.org/wiki/%D0%9F%D1%81%D0%B5%D0%B2%D0%B4%D0%BE%D0%BD%D0%B0%D1%82%D1%83%D1%80%D0%B0%D0%BB",
-      "example_title": "Псевдонатурал",
+      "example": "«задок» — Разговорное грубое: задница.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -2486,8 +2486,8 @@
       ],
       "definition": "Человек, зацикленный на одной теме в ущерб жизни. / Человек, задротивший в одну тему (игры, аниме) в ущерб жизни.",
       "example": "Задрот — распространенный в наши дни типаж человека, который проводит много времени в сети, не сильно сведущ в делах сексуального плана (скорее всего это девственник), в то же время пытается изображать из себя…",
-      "example_source": "https://lurkmore.org/wiki/%D0%97%D0%B0%D0%B4%D1%80%D0%BE%D1%82",
-      "example_title": "Задрот",
+      "example_source": null,
+      "example_title": null,
       "image": "https://neolurk.org/w/images/2/20/Ia-zadrot_ns9g.jpg",
       "image_source": "https://lurkmore.org/wiki/%D0%97%D0%B0%D0%B4%D1%80%D0%BE%D1%82"
     },
@@ -2499,8 +2499,8 @@
       ],
       "definition": "Грубое: крайняя плоть; оскорбление.",
       "example": "Залупа (хохл. Zалупа) — распространенное название для головы великого змея, который управляет человечеством с начала времён, проще говоря — полового члэна.",
-      "example_source": "https://lurkmore.org/wiki/%D0%97%D0%B0%D0%BB%D1%83%D0%BF%D0%B0",
-      "example_title": "Залупа",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -2511,9 +2511,9 @@
         "mat"
       ],
       "definition": "След от поцелуя; грубо — интимная отметина.",
-      "example": "Фаршмак",
-      "example_source": "https://lurkmore.org/wiki/%D0%A4%D0%B0%D1%80%D1%88%D0%BC%D0%B0%D0%BA",
-      "example_title": "Фаршмак",
+      "example": "«засос» — След от поцелуя; грубо — интимная отметина.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -2591,8 +2591,8 @@
       ],
       "definition": "Оскорбление: глупый человек. / Оскорбление: крайне глупый человек.",
       "example": "Идиоты — лица, которые страдают идиотизмом и оттого не в состоянии принимать нормальные решения.",
-      "example_source": "https://lurkmore.org/wiki/%D0%98%D0%B4%D0%B8%D0%BE%D1%82%D1%8B",
-      "example_title": "Идиоты",
+      "example_source": null,
+      "example_title": null,
       "image": "https://neolurk.org/w/images/1/19/Photo15-54-53.jpg",
       "image_source": "https://lurkmore.org/wiki/%D0%98%D0%B4%D0%B8%D0%BE%D1%82%D1%8B"
     },
@@ -2839,8 +2839,8 @@
       ],
       "definition": "Оскорбление: подлый, глупый мужчина. / Оскорбление: дурак, неприятный человек.",
       "example": "Эта статья про типаж человеков. Если вас интересуют рогатые парнокопытные, у нас есть статьи Серенький козлик и Зловещий козёл\n\nЭто название говорит само за себя.",
-      "example_source": "https://lurkmore.org/wiki/%D0%9A%D0%BE%D0%B7%D1%91%D0%BB",
-      "example_title": "Козёл",
+      "example_source": null,
+      "example_title": null,
       "image": "https://neolurk.org/w/images/d/d4/V5ry.webp",
       "image_source": "https://lurkmore.org/wiki/%D0%9A%D0%BE%D0%B7%D1%91%D0%BB"
     },
@@ -2996,8 +2996,8 @@
       ],
       "definition": "Оскорбление: идиот. / Оскорбление: умственно отсталый (грубо).",
       "example": "Топографический кретинизм",
-      "example_source": "https://lurkmore.org/wiki/%D0%A2%D0%BE%D0%BF%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B5%D1%82%D0%B8%D0%BD%D0%B8%D0%B7%D0%BC",
-      "example_title": "Топографический кретинизм",
+      "example_source": null,
+      "example_title": null,
       "image": "https://neolurk.org/w/images/9/94/Findway.jpg",
       "image_source": "https://lurkmore.org/wiki/%D0%A2%D0%BE%D0%BF%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B5%D1%82%D0%B8%D0%BD"
     },
@@ -3178,8 +3178,8 @@
       ],
       "definition": "Грубое: проститутка; оскорбление женщины.",
       "example": "Курва (рас. польск.",
-      "example_source": "https://lurkmore.org/wiki/%D0%9A%D1%83%D1%80%D0%B2%D0%B0",
-      "example_title": "Курва",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -3190,7 +3190,7 @@
         "mat"
       ],
       "definition": "Распутник; тот, кто водится с «курвами».",
-      "example": null,
+      "example": "«курвец» — Распутник; тот, кто водится с «курвами».",
       "example_source": null,
       "example_title": null,
       "image": null,
@@ -3372,9 +3372,9 @@
         "mat"
       ],
       "definition": "Сленговое: лох, неудачник.",
-      "example": "FastAPI",
-      "example_source": "https://lurkmore.org/wiki/FastAPI",
-      "example_title": "FastAPI",
+      "example": "«лошар» — Сленговое: лох, неудачник.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -3477,8 +3477,8 @@
       ],
       "definition": "Оскорбление: гадкая, мерзкая сущность.",
       "example": "Лярва (лат. Larva) — в современных оккультных учениях примитивный энергетический вампир, образование низкого уровня, которые гнездится на тонких планах мироздания.",
-      "example_source": "https://lurkmore.org/wiki/%D0%9B%D1%8F%D1%80%D0%B2%D0%B0",
-      "example_title": "Лярва",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -3554,9 +3554,9 @@
         "mat"
       ],
       "definition": "Грубое женское слово (анатомия).",
-      "example": "Пелотка (ЖПП, женская половая пизда) — в лексиконе удаффкомовского быдла женский половой орган, а равно и само лицо женского пола.",
-      "example_source": "https://lurkmore.org/wiki/%D0%9F%D0%B5%D0%BB%D0%BE%D1%82%D0%BA%D0%B0",
-      "example_title": "Пелотка",
+      "example": "«манда» — Грубое женское слово (анатомия).",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -3580,9 +3580,9 @@
         "mat"
       ],
       "definition": "Грубое прозвище, производное от «манда».",
-      "example": "Пиздоблядское мудоёбище",
-      "example_source": "https://lurkmore.org/wiki/%D0%9F%D0%B8%D0%B7%D0%B4%D0%BE%D0%B1%D0%BB%D1%8F%D0%B4%D1%81%D0%BA%D0%BE%D0%B5_%D0%BC%D1%83%D0%B4%D0%BE%D1%91%D0%B1%D0%B8%D1%89%D0%B5",
-      "example_title": "Пиздоблядское мудоёбище",
+      "example": "«мандюк» — Грубое прозвище, производное от «манда».",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -3619,9 +3619,9 @@
         "mat"
       ],
       "definition": "Матерное слово, ругательство как существительное.",
-      "example": "Коммент",
-      "example_source": "https://lurkmore.org/wiki/%D0%9A%D0%BE%D0%BC%D0%BC%D0%B5%D0%BD%D1%82",
-      "example_title": "Коммент",
+      "example": "«матюк» — Матерное слово, ругательство как существительное.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -3749,9 +3749,9 @@
         "mat"
       ],
       "definition": "Сленг: старый, «отживший» мужчина; идиот.",
-      "example": "Пиздабол",
-      "example_source": "https://lurkmore.org/wiki/%D0%9F%D0%B8%D0%B7%D0%B4%D0%B0%D0%B1%D0%BE%D0%BB",
-      "example_title": "Пиздабол",
+      "example": "«мерин» — Сленг: старый, «отживший» мужчина; идиот.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -3802,8 +3802,8 @@
       ],
       "definition": "Оральный половой акт (грубое слово).",
       "example": "Минет — форма третьего лица единственного числа будущего времени глагола «ми́нуть».",
-      "example_source": "https://lurkmore.org/wiki/%D0%9C%D0%B8%D0%BD%D0%B5%D1%82",
-      "example_title": "Минет",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -3893,11 +3893,11 @@
         "dvach"
       ],
       "definition": "Оскорбление: подлый, ничтожный человек. / Сильное оскорбление: подлый, ничтожный человек.",
-      "example": "Игорь Ашманов",
-      "example_source": "https://lurkmore.org/wiki/%D0%98%D0%B3%D0%BE%D1%80%D1%8C_%D0%90%D1%88%D0%BC%D0%B0%D0%BD%D0%BE%D0%B2",
-      "example_title": "Игорь Ашманов",
-      "image": "https://neolurk.org/w/images/1/18/Mario_platinum.png",
-      "image_source": "https://lurkmore.org/wiki/%D0%A3%D0%BC%D0%B5%D1%80%D1%88%D0%B8%D0%B9_%D0%B1%D1%80%D0%B0%D1%82"
+      "example": "«мразь» — Оскорбление: подлый, ничтожный человек.",
+      "example_source": null,
+      "example_title": null,
+      "image": null,
+      "image_source": null
     },
     {
       "word": "мудак",
@@ -3908,8 +3908,8 @@
       ],
       "definition": "Частое матерное оскорбление мужчины. / Грубое оскорбление мужчины.",
       "example": "Мудак — человек, который всех задолбал. Обычно это происходит от реализации идей хуцпы человеком ограниченным, глупым и не понимающим сути вещей — он делает откровенно нелепые или вредные вещи, пытается реализовать…",
-      "example_source": "https://lurkmore.org/wiki/%D0%9C%D1%83%D0%B4%D0%B0%D0%BA",
-      "example_title": "Мудак",
+      "example_source": null,
+      "example_title": null,
       "image": "https://neolurk.org/w/images/3/36/Typical_Mudaki.jpg",
       "image_source": "https://lurkmore.org/wiki/%D0%9C%D1%83%D0%B4%D0%B0%D0%BA"
     },
@@ -3920,9 +3920,9 @@
         "mat"
       ],
       "definition": "Грубое оскорбление, вариация на «муд».",
-      "example": "Мудак",
-      "example_source": "https://lurkmore.org/wiki/%D0%9C%D1%83%D0%B4%D0%B0%D0%BA",
-      "example_title": "Мудак",
+      "example": "«мудень» — Грубое оскорбление, вариация на «муд».",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -3934,8 +3934,8 @@
       ],
       "definition": "Оскорбление: глупый, заносчивый человек.",
       "example": "Ты опять выходишь на связь, мудило? (Ты опять выходишь на связь, мудила?) — фраза, которая стала мемом за счёт пранка с Дедом ИВЦ (Александром Богомоловым).",
-      "example_source": "https://lurkmore.org/wiki/%D0%A2%D1%8B_%D0%BE%D0%BF%D1%8F%D1%82%D1%8C_%D0%B2%D1%8B%D1%85%D0%BE%D0%B4%D0%B8%D1%88%D1%8C_%D0%BD%D0%B0_%D1%81%D0%B2%D1%8F%D0%B7%D1%8C%2C_%D0%BC%D1%83%D0%B4%D0%B8%D0%BB%D0%BE%3F",
-      "example_title": "Ты опять выходишь на связь, мудило?",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -3946,9 +3946,9 @@
         "mat"
       ],
       "definition": "Увеличительное: большой «мудак».",
-      "example": "Старая копипаста:Пиздоблядское мудоёбище",
-      "example_source": "https://lurkmore.org/wiki/%D0%A1%D1%82%D0%B0%D1%80%D0%B0%D1%8F_%D0%BA%D0%BE%D0%BF%D0%B8%D0%BF%D0%B0%D1%81%D1%82%D0%B0%3A%D0%9F%D0%B8%D0%B7%D0%B4%D0%BE%D0%B1%D0%BB%D1%8F%D0%B4%D1%81%D0%BA%D0%BE%D0%B5_%D0%BC%D1%83%D0%B4%D0%BE%D1%91%D0%B1%D0%B8%D1%89%D0%B5",
-      "example_title": "Старая копипаста:Пиздоблядское мудоёбище",
+      "example": "«мудище» — Увеличительное: большой «мудак».",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -3960,9 +3960,9 @@
         "dvach"
       ],
       "definition": "Оскорбление: болван, глупец. / Оскорбление: тупой, бестолковый человек.",
-      "example": "Александр Гриценко",
-      "example_source": "https://lurkmore.org/wiki/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80_%D0%93%D1%80%D0%B8%D1%86%D0%B5%D0%BD%D0%BA%D0%BE",
-      "example_title": "Александр Гриценко",
+      "example": "«мудло» — Оскорбление: болван, глупец.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -3973,9 +3973,9 @@
         "mat"
       ],
       "definition": "Грубое разговорное: сопли, гадость.",
-      "example": "Холивары вокруг байкеров",
-      "example_source": "https://lurkmore.org/wiki/%D0%A5%D0%BE%D0%BB%D0%B8%D0%B2%D0%B0%D1%80%D1%8B_%D0%B2%D0%BE%D0%BA%D1%80%D1%83%D0%B3_%D0%B1%D0%B0%D0%B9%D0%BA%D0%B5%D1%80%D0%BE%D0%B2",
-      "example_title": "Холивары вокруг байкеров",
+      "example": "«мудня» — Грубое разговорное: сопли, гадость.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -4012,9 +4012,9 @@
         "mat"
       ],
       "definition": "Подлец, который ведёт себя нагло.",
-      "example": "Полковник Демьянов",
-      "example_source": "https://lurkmore.org/wiki/%D0%9F%D0%BE%D0%BB%D0%BA%D0%BE%D0%B2%D0%BD%D0%B8%D0%BA_%D0%94%D0%B5%D0%BC%D1%8C%D1%8F%D0%BD%D0%BE%D0%B2",
-      "example_title": "Полковник Демьянов",
+      "example": "«наглец» — Подлец, который ведёт себя нагло.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -4026,8 +4026,8 @@
       ],
       "definition": "Обман, развод (грубый сленг).",
       "example": "Наебалово, также Наебка или Наеб — хитрый и при этом наглый обман, своего рода аналог хуцпы.",
-      "example_source": "https://lurkmore.org/wiki/%D0%9D%D0%B0%D0%B5%D0%B1%D0%B0%D0%BB%D0%BE%D0%B2%D0%BE",
-      "example_title": "Наебалово",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -4038,7 +4038,7 @@
         "mat"
       ],
       "definition": "Тот, кого наебали; или мелкий обманщик.",
-      "example": null,
+      "example": "«наебыш» — Тот, кого наебали; или мелкий обманщик.",
       "example_source": null,
       "example_title": null,
       "image": null,
@@ -4051,9 +4051,9 @@
         "mat"
       ],
       "definition": "Грубый сленг: половой акт.",
-      "example": "Импульс и энергия для писателей фэнтези",
-      "example_source": "https://lurkmore.org/wiki/%D0%98%D0%BC%D0%BF%D1%83%D0%BB%D1%8C%D1%81_%D0%B8_%D1%8D%D0%BD%D0%B5%D1%80%D0%B3%D0%B8%D1%8F_%D0%B4%D0%BB%D1%8F_%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D0%B5%D0%BB%D0%B5%D0%B9_%D1%84%D1%8D%D0%BD%D1%82%D0%B5%D0%B7%D0%B8",
-      "example_title": "Импульс и энергия для писателей фэнтези",
+      "example": "«натяг» — Грубый сленг: половой акт.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -4079,8 +4079,8 @@
       ],
       "definition": "Матерное «к чёрту», посылание прочь. / Грубое «пошёл прочь»; посыл куда подальше.",
       "example": "Нахуй — туда куда тебя часто посылают и на что хороша твоя задница, то на что садится твоя жирная мамаша, на чём скачет твоя будущая жена на вписках, в общем это сюда…",
-      "example_source": "https://lurkmore.org/wiki/%D0%9D%D0%B0%D1%85%D1%83%D0%B9",
-      "example_title": "Нахуй",
+      "example_source": null,
+      "example_title": null,
       "image": "https://neolurk.org/w/images/c/c9/%D0%91%D0%B5%D0%B7_%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F_tet.png",
       "image_source": "https://lurkmore.org/wiki/%D0%9D%D0%B0%D1%85%D1%83%D0%B9"
     },
@@ -4443,10 +4443,10 @@
       ],
       "definition": "Оскорбление: тупой человек.",
       "example": "Олень — мощное парнокопытное животное рогового характера, распространено в Евразии и Америке.",
-      "example_source": "https://lurkmore.org/wiki/%D0%9E%D0%BB%D0%B5%D0%BD%D1%8C",
-      "example_title": "Олень",
-      "image": "https://neolurk.org/w/images/c/cc/%D0%A5%D1%85_%D0%9E%D0%BB%D0%B5%D0%BD%D1%8C.JPG",
-      "image_source": "https://lurkmore.org/wiki/%D0%9E%D0%BB%D0%B5%D0%BD%D1%8C"
+      "example_source": null,
+      "example_title": null,
+      "image": null,
+      "image_source": null
     },
     {
       "word": "ололо",
@@ -4508,10 +4508,10 @@
       ],
       "definition": "Оскорбление: глупый, упрямый как осёл.",
       "example": "Ослина — экспрессивная характеристика для полезного животного осёл.",
-      "example_source": "https://lurkmore.org/wiki/%D0%9E%D1%81%D0%BB%D0%B8%D0%BD%D0%B0",
-      "example_title": "Ослина",
-      "image": "https://neolurk.org/w/images/a/a5/Aaa036e4cb18e39c714f_XL.jpg",
-      "image_source": "https://lurkmore.org/wiki/%D0%9E%D1%81%D0%B5%D0%BB"
+      "example_source": null,
+      "example_title": null,
+      "image": null,
+      "image_source": null
     },
     {
       "word": "отаку",
@@ -4533,9 +4533,9 @@
         "mat"
       ],
       "definition": "Сленговое: глупый, неуклюжий человек.",
-      "example": "Пазний Иж/Словарик",
-      "example_source": "https://lurkmore.org/wiki/%D0%9F%D0%B0%D0%B7%D0%BD%D0%B8%D0%B9_%D0%98%D0%B6/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D0%B8%D0%BA",
-      "example_title": "Пазний Иж/Словарик",
+      "example": "«оторов» — Сленговое: глупый, неуклюжий человек.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -4547,8 +4547,8 @@
       ],
       "definition": "Грубое: оральный половой акт.",
       "example": "Отсос (Suck) — распространённое слово в русском языке, которое в прямом своём значении обозначает осуществление минета (отсоса полового члена), а в переносном значении — ощущение фейла (X отсосал обозначает, что в…",
-      "example_source": "https://lurkmore.org/wiki/%D0%9E%D1%82%D1%81%D0%BE%D1%81",
-      "example_title": "Отсос",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -4573,8 +4573,8 @@
       ],
       "definition": "Труп животного; переносно — мерзкий человек.",
       "example": "Гриф — большая птица, обладающая очень характерной внешностью (большой и длинной шеей, на которой совершенно отсутствуют перья), а также нехорошей привычкой поедать падаль.",
-      "example_source": "https://lurkmore.org/wiki/%D0%93%D1%80%D0%B8%D1%84",
-      "example_title": "Гриф",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -4586,9 +4586,9 @@
         "dvach"
       ],
       "definition": "Оскорбление: подлый, низкий человек. / Оскорбление: подлый, мелкий человек.",
-      "example": "Редиска (жаргонизм)",
-      "example_source": "https://lurkmore.org/wiki/%D0%A0%D0%B5%D0%B4%D0%B8%D1%81%D0%BA%D0%B0_%28%D0%B6%D0%B0%D1%80%D0%B3%D0%BE%D0%BD%D0%B8%D0%B7%D0%BC%29",
-      "example_title": "Редиска (жаргонизм)",
+      "example": "«падла» — Оскорбление: подлый, низкий человек.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -4599,7 +4599,7 @@
         "mat"
       ],
       "definition": "То же, что «падла», грубее.",
-      "example": null,
+      "example": "«падлюк» — То же, что «падла», грубее.",
       "example_source": null,
       "example_title": null,
       "image": null,
@@ -4639,11 +4639,11 @@
         "dvach"
       ],
       "definition": "Оскорбительное слово о гомосексуале. / Грубое оскорбление; homophobic slur.",
-      "example": "Ахтунг (пол. кор.",
-      "example_source": "https://lurkmore.org/wiki/%D0%90%D1%85%D1%82%D1%83%D0%BD%D0%B3",
-      "example_title": "Ахтунг",
-      "image": "https://neolurk.org/w/images/e/e5/Achtung%21%21%21.JPG",
-      "image_source": "https://lurkmore.org/wiki/%D0%90%D1%85%D1%82%D1%83%D0%BD%D0%B3"
+      "example": "«педик» — Оскорбительное слово о гомосексуале.",
+      "example_source": null,
+      "example_title": null,
+      "image": null,
+      "image_source": null
     },
     {
       "word": "педрил",
@@ -4652,9 +4652,9 @@
         "mat"
       ],
       "definition": "Грубое оскорбление (от «педик»).",
-      "example": "Котенька",
-      "example_source": "https://lurkmore.org/wiki/%D0%9A%D0%BE%D1%82%D0%B5%D0%BD%D1%8C%D0%BA%D0%B0",
-      "example_title": "Котенька",
+      "example": "«педрил» — Грубое оскорбление (от «педик»).",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -4691,9 +4691,9 @@
         "mat"
       ],
       "definition": "Мужской половой орган (книжное, в игре — грубая лексика).",
-      "example": "Хуй (англ. khui, голл.",
-      "example_source": "https://lurkmore.org/wiki/%D0%A5%D1%83%D0%B9",
-      "example_title": "Хуй",
+      "example": "«пенис» — Мужской половой орган (книжное, в игре — грубая лексика).",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -4744,8 +4744,8 @@
       ],
       "definition": "Грубое: задница.",
       "example": "Пердак — известное народное обозначение для тухеса, то бишь самого обычного заднего двора.",
-      "example_source": "https://lurkmore.org/wiki/%D0%9F%D0%B5%D1%80%D0%B4%D0%B0%D0%BA",
-      "example_title": "Пердак",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -4756,9 +4756,9 @@
         "mat"
       ],
       "definition": "Тот, кто пукает; грубое прозвище.",
-      "example": "Пердёж — процесс выпускания газа из жопы (пердака).",
-      "example_source": "https://lurkmore.org/wiki/%D0%9F%D0%B5%D1%80%D0%B4%D1%91%D0%B6",
-      "example_title": "Пердёж",
+      "example": "«пердун» — Тот, кто пукает; грубое прозвище.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -4769,9 +4769,9 @@
         "mat"
       ],
       "definition": "Грубое: пук.",
-      "example": "Мухосранск, Запердянка, Усть-Пердинск интеллигент.",
-      "example_source": "https://lurkmore.org/wiki/%D0%9C%D1%83%D1%85%D0%BE%D1%81%D1%80%D0%B0%D0%BD%D1%81%D0%BA",
-      "example_title": "Мухосранск",
+      "example": "«пердь» — Грубое: пук.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -4797,8 +4797,8 @@
       ],
       "definition": "Тюремный/грубый сленг: униженный мужчина. / Оскорбление в тюремном/бытовом сленге; слабак.",
       "example": "Петух — мощный мем сообщества Path of Exile; применяется аналогично петухам обыкновенным, то есть в качестве указания на то, что некто — обычный пассивный петух.",
-      "example_source": "https://lurkmore.org/wiki/%D0%9F%D0%B5%D1%82%D1%83%D1%85_%28Path_of_Exile%29",
-      "example_title": "Петух (Path of Exile)",
+      "example_source": null,
+      "example_title": null,
       "image": "https://neolurk.org/w/images/2/2c/Petyh_poe_1.jpg",
       "image_source": "https://lurkmore.org/wiki/%D0%9F%D0%B5%D1%82%D1%83%D1%85_%28Path_of_Exile%29"
     },
@@ -4811,8 +4811,8 @@
       ],
       "definition": "Матерное оскорбление мужчины/гомосексуала. / Грубое homophobic оскорбление.",
       "example": "Пидорас (Пидор, Пидарас, Педик, Педрила, Петух, лурк.",
-      "example_source": "https://lurkmore.org/wiki/%D0%9F%D0%B8%D0%B4%D0%BE%D1%80%D0%B0%D1%81",
-      "example_title": "Пидорас",
+      "example_source": null,
+      "example_title": null,
       "image": "https://neolurk.org/w/images/2/21/%D0%9E%D0%B4%D0%B8%D0%BD_%D1%80%D0%B0%D0%B7.jpg",
       "image_source": "https://lurkmore.org/wiki/%D0%9F%D0%B8%D0%B4%D0%BE%D1%80%D0%B0%D1%81"
     },
@@ -4838,8 +4838,8 @@
       ],
       "definition": "Вариация «пидор», грубое оскорбление. / Искажение «пидор» в интернет-сленге.",
       "example": "Пидрила",
-      "example_source": "https://lurkmore.org/wiki/%D0%9F%D0%B8%D0%B4%D1%80%D0%B8%D0%BB%D0%B0",
-      "example_title": "Пидрила",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -4852,8 +4852,8 @@
       ],
       "definition": "Базовое грубое женское анатомическое слово. / Грубое матерное слово.",
       "example": "«Пизда» (по медицински: Вульва, влагалище; по-детски: писька, ласкательно: писечка, сладкая киска; кулинарно: вареник, пирожок; криминально: мокрощёлка, мочалка, глазок, купка, сика, шмонька, манда, куница; официально…",
-      "example_source": "https://lurkmore.org/wiki/%D0%9F%D0%B8%D0%B7%D0%B4%D0%B0",
-      "example_title": "Пизда",
+      "example_source": null,
+      "example_title": null,
       "image": "https://neolurk.org/w/images/a/a0/Ed8ad97c56f.jpg",
       "image_source": "https://lurkmore.org/wiki/%D0%9F%D0%B8%D0%B7%D0%B4%D0%B0"
     },
@@ -4864,9 +4864,9 @@
         "mat"
       ],
       "definition": "Грубое, производное от «пизда».",
-      "example": "Tatsuya",
-      "example_source": "https://lurkmore.org/wiki/Tatsuya",
-      "example_title": "Tatsuya",
+      "example": "«пиздак» — Грубое, производное от «пизда».",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -4879,8 +4879,8 @@
       ],
       "definition": "Враньё, ложь. / Враньё, болтовня; «полный пиздеж».",
       "example": "Пиздёж — народное название для общения. Также часто пиздежом называют сообщение недостоверной информации.",
-      "example_source": "https://lurkmore.org/wiki/%D0%9F%D0%B8%D0%B7%D0%B4%D1%91%D0%B6",
-      "example_title": "Пиздёж",
+      "example_source": null,
+      "example_title": null,
       "image": "https://neolurk.org/w/images/b/bd/Mouth_with_tongue.png",
       "image_source": "https://lurkmore.org/wiki/%D0%9F%D0%B8%D0%B7%D0%B4%D1%91%D0%B6"
     },
@@ -4892,8 +4892,8 @@
       ],
       "definition": "Полный крах, кошмар, «всё пропало».",
       "example": "Большой Пиздец (он же Большой Пэ, час «П», толстый полный полярный лис, алопекс лагопус, апокалипсец, армагеддец, «Большой_Всемирный_Облом», по странному совпадению созвучен с английским peace-death) — торжество…",
-      "example_source": "https://lurkmore.org/wiki/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%BE%D0%B9_%D0%9F%D0%B8%D0%B7%D0%B4%D0%B5%D1%86",
-      "example_title": "Большой Пиздец",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -4905,11 +4905,11 @@
         "dvach"
       ],
       "definition": "Грубое усиление ситуации (от «пиздец»). / Грубое искажение/усиление от корня «пизд-».",
-      "example": "Большой Пиздец (он же Большой Пэ, час «П», толстый полный полярный лис, алопекс лагопус, апокалипсец, армагеддец, «Большой_Всемирный_Облом», по странному совпадению созвучен с английским peace-death) — торжество…",
-      "example_source": "https://lurkmore.org/wiki/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%BE%D0%B9_%D0%9F%D0%B8%D0%B7%D0%B4%D0%B5%D1%86",
-      "example_title": "Большой Пиздец",
-      "image": "https://neolurk.org/w/images/4/46/Pisec.jpg",
-      "image_source": "https://lurkmore.org/wiki/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%BE%D0%B9_%D0%9F%D0%B8%D0%B7%D0%B4%D0%B5%D1%86"
+      "example": "«пиздос» — Грубое усиление ситуации (от «пиздец»).",
+      "example_source": null,
+      "example_title": null,
+      "image": null,
+      "image_source": null
     },
     {
       "word": "пиздун",
@@ -4919,8 +4919,8 @@
       ],
       "definition": "Грубое прозвище от «пизда».",
       "example": "Бобер-пиздун",
-      "example_source": "https://lurkmore.org/wiki/%D0%91%D0%BE%D0%B1%D0%B5%D1%80-%D0%BF%D0%B8%D0%B7%D0%B4%D1%83%D0%BD",
-      "example_title": "Бобер-пиздун",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -4932,8 +4932,8 @@
       ],
       "definition": "Дитя или мелкий наглец (грубо).",
       "example": "Лурка — энциклопедия, в которой одни пиздюки пишут для других:\n\nПездюк\nPeace duke",
-      "example_source": "https://lurkmore.org/wiki/%D0%9F%D0%B8%D0%B7%D0%B4%D1%8E%D0%BA",
-      "example_title": "Пиздюк",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -5009,11 +5009,11 @@
         "mat"
       ],
       "definition": "Детское/грубое: половой орган.",
-      "example": "Жест маленького члена",
-      "example_source": "https://lurkmore.org/wiki/%D0%96%D0%B5%D1%81%D1%82_%D0%BC%D0%B0%D0%BB%D0%B5%D0%BD%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D1%87%D0%BB%D0%B5%D0%BD%D0%B0",
-      "example_title": "Жест маленького члена",
-      "image": "https://neolurk.org/w/images/c/c1/Photo_202356658-18-04.jpg",
-      "image_source": "https://lurkmore.org/wiki/%D0%9F%D0%B8%D1%81%D1%8E%D0%BD"
+      "example": "«пипка» — Детское/грубое: половой орган.",
+      "example_source": null,
+      "example_title": null,
+      "image": null,
+      "image_source": null
     },
     {
       "word": "пистифаг",
@@ -5036,8 +5036,8 @@
       ],
       "definition": "Детское слово для полового органа; в быту грубо.",
       "example": "Писька — слово, обозначающее срамной уд али еще какую нелепую дыру, а так же непосредственно сам этот человеческий или животный половой орган.",
-      "example_source": "https://lurkmore.org/wiki/%D0%9F%D0%B8%D1%81%D1%8C%D0%BA%D0%B0",
-      "example_title": "Писька",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -5048,9 +5048,9 @@
         "mat"
       ],
       "definition": "Уменьшительное грубое: пенис.",
-      "example": "Хуй (англ. khui, голл.",
-      "example_source": "https://lurkmore.org/wiki/%D0%A5%D1%83%D0%B9",
-      "example_title": "Хуй",
+      "example": "«писюн» — Уменьшительное грубое: пенис.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -5113,9 +5113,9 @@
         "mat"
       ],
       "definition": "Оскорбление: низкий, безнравственный человек.",
-      "example": "Россия должна быть уничтожена",
-      "example_source": "https://lurkmore.org/wiki/%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F_%D0%B4%D0%BE%D0%BB%D0%B6%D0%BD%D0%B0_%D0%B1%D1%8B%D1%82%D1%8C_%D1%83%D0%BD%D0%B8%D1%87%D1%82%D0%BE%D0%B6%D0%B5%D0%BD%D0%B0",
-      "example_title": "Россия должна быть уничтожена",
+      "example": "«подлец» — Оскорбление: низкий, безнравственный человек.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -5126,7 +5126,7 @@
         "mat"
       ],
       "definition": "Грубое: сексуальная возня, суета.",
-      "example": null,
+      "example": "«поебон» — Грубое: сексуальная возня, суета.",
       "example_source": null,
       "example_title": null,
       "image": null,
@@ -5139,9 +5139,9 @@
         "mat"
       ],
       "definition": "Диарея; грубо о чём-то плохом.",
-      "example": "Говно (надм. дерьмо, офиц.-канц.",
-      "example_source": "https://lurkmore.org/wiki/%D0%93%D0%BE%D0%B2%D0%BD%D0%BE",
-      "example_title": "Говно",
+      "example": "«понос» — Диарея; грубо о чём-то плохом.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -5165,9 +5165,9 @@
         "mat"
       ],
       "definition": "Грубое: половой акт, разврат.",
-      "example": "Прон (англ. pron, pr0n) — интернет-жаргонизм, обозначающий порнографию.",
-      "example_source": "https://lurkmore.org/wiki/%D0%9F%D1%80%D0%BE%D0%BD",
-      "example_title": "Прон",
+      "example": "«порево» — Грубое: половой акт, разврат.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -5218,11 +5218,11 @@
         "dvach"
       ],
       "definition": "Эвфемизм: «похуй» — всё равно. / Эвфемизм: «мне похер» — всё равно.",
-      "example": "Бутерброд",
-      "example_source": "https://lurkmore.org/wiki/%D0%91%D1%83%D1%82%D0%B5%D1%80%D0%B1%D1%80%D0%BE%D0%B4",
-      "example_title": "Бутерброд",
-      "image": "https://neolurk.org/w/images/6/67/Give_a_fuck.png",
-      "image_source": "https://lurkmore.org/wiki/%D0%92%D1%81%D0%B5%D0%BC_%D0%BF%D0%BE%D1%85%D1%83%D0%B9"
+      "example": "«похер» — Эвфемизм: «похуй» — всё равно.",
+      "example_source": null,
+      "example_title": null,
+      "image": null,
+      "image_source": null
     },
     {
       "word": "похуй",
@@ -5233,8 +5233,8 @@
       ],
       "definition": "Матерное «всё равно», безразличие. / Грубое «мне всё равно».",
       "example": "«Всем похуй» или риторическое «кого это ебёт?» (англ.",
-      "example_source": "https://lurkmore.org/wiki/%D0%92%D1%81%D0%B5%D0%BC_%D0%BF%D0%BE%D1%85%D1%83%D0%B9",
-      "example_title": "Всем похуй",
+      "example_source": null,
+      "example_title": null,
       "image": "https://neolurk.org/w/images/6/67/Give_a_fuck.png",
       "image_source": "https://lurkmore.org/wiki/%D0%92%D1%81%D0%B5%D0%BC_%D0%BF%D0%BE%D1%85%D1%83%D0%B9"
     },
@@ -5675,8 +5675,8 @@
       ],
       "definition": "Оскорбление: грязный, неопрятный человек.",
       "example": "Свинья — умное кормовое животное средне-малых размеров сельскохозяйственного назначения.",
-      "example_source": "https://lurkmore.org/wiki/%D0%A1%D0%B2%D0%B8%D0%BD%D1%8C%D1%8F",
-      "example_title": "Свинья",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -5687,9 +5687,9 @@
         "mat"
       ],
       "definition": "Оскорбление: подлый, мерзкий человек (форма «сволочь»).",
-      "example": "The Asylum",
-      "example_source": "https://lurkmore.org/wiki/The_Asylum",
-      "example_title": "The Asylum",
+      "example": "«сволоч» — Оскорбление: подлый, мерзкий человек (форма «сволочь»).",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -5700,9 +5700,9 @@
         "mat"
       ],
       "definition": "Редкий сленг: сперма.",
-      "example": "Сикель — олдовый мем из тех времен, когда гостевые книги ещё доставляли.",
-      "example_source": "https://lurkmore.org/wiki/%D0%A1%D0%B8%D0%BA%D0%B5%D0%BB%D1%8C",
-      "example_title": "Сикель",
+      "example": "«секель» — Редкий сленг: сперма.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -5726,7 +5726,7 @@
         "mat"
       ],
       "definition": "Редкий грубый сленг: половой акт.",
-      "example": null,
+      "example": "«серево» — Редкий грубый сленг: половой акт.",
       "example_source": null,
       "example_title": null,
       "image": null,
@@ -5753,8 +5753,8 @@
       ],
       "definition": "Редкое грубое слово на тему секса.",
       "example": "Сикель — олдовый мем из тех времен, когда гостевые книги ещё доставляли.",
-      "example_source": "https://lurkmore.org/wiki/%D0%A1%D0%B8%D0%BA%D0%B5%D0%BB%D1%8C",
-      "example_title": "Сикель",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -5765,7 +5765,7 @@
         "mat"
       ],
       "definition": "Грубое: женщина в сексуальном контексте.",
-      "example": null,
+      "example": "«сикуха» — Грубое: женщина в сексуальном контексте.",
       "example_source": null,
       "example_title": null,
       "image": null,
@@ -5778,9 +5778,9 @@
         "mat"
       ],
       "definition": "Грубое: женская грудь.",
-      "example": "Сиськи (груди, сисяндры, нудесы, буфера, дойки, вымя, хакимасы, (.",
-      "example_source": "https://lurkmore.org/wiki/%D0%A1%D0%B8%D1%81%D1%8C%D0%BA%D0%B8",
-      "example_title": "Сиськи",
+      "example": "«сиська» — Грубое: женская грудь.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -5947,9 +5947,9 @@
         "mat"
       ],
       "definition": "Половое покрытие у животных; грубо о сексе.",
-      "example": "Укр",
-      "example_source": "https://lurkmore.org/wiki/%D0%A3%D0%BA%D1%80",
-      "example_title": "Укр",
+      "example": "«случка» — Половое покрытие у животных; грубо о сексе.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -5960,9 +5960,9 @@
         "mat"
       ],
       "definition": "Архаичное/грубое: мерзкий человек низшего сорта.",
-      "example": "Поедание свиней",
-      "example_source": "https://lurkmore.org/wiki/%D0%9F%D0%BE%D0%B5%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D1%81%D0%B2%D0%B8%D0%BD%D0%B5%D0%B9",
-      "example_title": "Поедание свиней",
+      "example": "«смерд» — Архаичное/грубое: мерзкий человек низшего сорта.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -5986,9 +5986,9 @@
         "mat"
       ],
       "definition": "Невыносимая вонь; переносно — гадость.",
-      "example": "Аббитх",
-      "example_source": "https://lurkmore.org/wiki/%D0%90%D0%B1%D0%B1%D0%B8%D1%82%D1%85",
-      "example_title": "Аббитх",
+      "example": "«смрад» — Невыносимая вонь; переносно — гадость.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -6051,9 +6051,9 @@
         "mat"
       ],
       "definition": "Слизь из носа; пренебрежительно о человеке.",
-      "example": "Школа боевых искусств",
-      "example_source": "https://lurkmore.org/wiki/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0_%D0%B1%D0%BE%D0%B5%D0%B2%D1%8B%D1%85_%D0%B8%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2",
-      "example_title": "Школа боевых искусств",
+      "example": "«сопля» — Слизь из носа; пренебрежительно о человеке.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -6129,9 +6129,9 @@
         "mat"
       ],
       "definition": "Грубое: задница.",
-      "example": "Жопа (Афедрон, Сракотан, Дупло) — универсальный двунаправленный интерфейс ввода-вывода.",
-      "example_source": "https://lurkmore.org/wiki/%D0%96%D0%BE%D0%BF%D0%B0",
-      "example_title": "Жопа",
+      "example": "«срака» — Грубое: задница.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -6142,7 +6142,7 @@
         "mat"
       ],
       "definition": "Грубо-уменьшительное от «срань».",
-      "example": null,
+      "example": "«сранка» — Грубо-уменьшительное от «срань».",
       "example_source": null,
       "example_title": null,
       "image": null,
@@ -6155,9 +6155,9 @@
         "mat"
       ],
       "definition": "Фекалии; всё грязное и мерзкое.",
-      "example": "Анти Интернет",
-      "example_source": "https://lurkmore.org/wiki/%D0%90%D0%BD%D1%82%D0%B8_%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82",
-      "example_title": "Анти Интернет",
+      "example": "«срань» — Фекалии; всё грязное и мерзкое.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -6169,8 +6169,8 @@
       ],
       "definition": "То же, что срань.",
       "example": "Притча про сранье в лесу",
-      "example_source": "https://lurkmore.org/wiki/%D0%9F%D1%80%D0%B8%D1%82%D1%87%D0%B0_%D0%BF%D1%80%D0%BE_%D1%81%D1%80%D0%B0%D0%BD%D1%8C%D0%B5_%D0%B2_%D0%BB%D0%B5%D1%81%D1%83",
-      "example_title": "Притча про сранье в лесу",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -6194,7 +6194,7 @@
         "mat"
       ],
       "definition": "Грубое усиление (от «ссать»).",
-      "example": null,
+      "example": "«ссака» — Грубое усиление (от «ссать»).",
       "example_source": null,
       "example_title": null,
       "image": null,
@@ -6207,7 +6207,7 @@
         "mat"
       ],
       "definition": "Грубое прозвище (от «ссать»).",
-      "example": null,
+      "example": "«ссанец» — Грубое прозвище (от «ссать»).",
       "example_source": null,
       "example_title": null,
       "image": null,
@@ -6220,7 +6220,7 @@
         "mat"
       ],
       "definition": "Грубое, производное от «ссать».",
-      "example": null,
+      "example": "«ссанка» — Грубое, производное от «ссать».",
       "example_source": null,
       "example_title": null,
       "image": null,
@@ -6233,9 +6233,9 @@
         "mat"
       ],
       "definition": "Моча; грязная жидкость (грубо).",
-      "example": "Смехуечки:Девочки тоже какают",
-      "example_source": "https://lurkmore.org/wiki/%D0%A1%D0%BC%D0%B5%D1%85%D1%83%D0%B5%D1%87%D0%BA%D0%B8%3A%D0%94%D0%B5%D0%B2%D0%BE%D1%87%D0%BA%D0%B8_%D1%82%D0%BE%D0%B6%D0%B5_%D0%BA%D0%B0%D0%BA%D0%B0%D1%8E%D1%82",
-      "example_title": "Смехуечки:Девочки тоже какают",
+      "example": "«ссанье» — Моча; грязная жидкость (грубо).",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -6246,9 +6246,9 @@
         "mat"
       ],
       "definition": "Трус; тот, кто «ссыкнул» (грубо).",
-      "example": "Пригожин против Стрелкова",
-      "example_source": "https://lurkmore.org/wiki/%D0%9F%D1%80%D0%B8%D0%B3%D0%BE%D0%B6%D0%B8%D0%BD_%D0%BF%D1%80%D0%BE%D1%82%D0%B8%D0%B2_%D0%A1%D1%82%D1%80%D0%B5%D0%BB%D0%BA%D0%BE%D0%B2%D0%B0",
-      "example_title": "Пригожин против Стрелкова",
+      "example": "«ссыкло» — Трус; тот, кто «ссыкнул» (грубо).",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -6259,9 +6259,9 @@
         "mat"
       ],
       "definition": "Трус (грубое).",
-      "example": "Staredad",
-      "example_source": "https://lurkmore.org/wiki/Staredad",
-      "example_title": "Staredad",
+      "example": "«ссыкун» — Трус (грубое).",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -6273,9 +6273,9 @@
         "dvach"
       ],
       "definition": "Оскорбление: злая, мерзкая женщина. / Оскорбление женщины: злая, меркантильная.",
-      "example": "Азино три топора",
-      "example_source": "https://lurkmore.org/wiki/%D0%90%D0%B7%D0%B8%D0%BD%D0%BE_%D1%82%D1%80%D0%B8_%D1%82%D0%BE%D0%BF%D0%BE%D1%80%D0%B0",
-      "example_title": "Азино три топора",
+      "example": "«стерва» — Оскорбление: злая, мерзкая женщина.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -6299,9 +6299,9 @@
         "mat"
       ],
       "definition": "Уменьшительное грубое оскорбление.",
-      "example": "Не судите, да не судимы будете",
-      "example_source": "https://lurkmore.org/wiki/%D0%9D%D0%B5_%D1%81%D1%83%D0%B4%D0%B8%D1%82%D0%B5%2C_%D0%B4%D0%B0_%D0%BD%D0%B5_%D1%81%D1%83%D0%B4%D0%B8%D0%BC%D1%8B_%D0%B1%D1%83%D0%B4%D0%B5%D1%82%D0%B5",
-      "example_title": "Не судите, да не судимы будете",
+      "example": "«сучок» — Уменьшительное грубое оскорбление.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -6325,9 +6325,9 @@
         "mat"
       ],
       "definition": "Очень редкое местное грубое слово; сомнительная самостоятельная единица.",
-      "example": "Проболтаться по пьяни",
-      "example_source": "https://lurkmore.org/wiki/%D0%9F%D1%80%D0%BE%D0%B1%D0%BE%D0%BB%D1%82%D0%B0%D1%82%D1%8C%D1%81%D1%8F_%D0%BF%D0%BE_%D0%BF%D1%8C%D1%8F%D0%BD%D0%B8",
-      "example_title": "Проболтаться по пьяни",
+      "example": "«сявка» — Очень редкое местное грубое слово; сомнительная самостоятельная единица.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -6353,8 +6353,8 @@
       ],
       "definition": "Оскорбление: мерзкое существо, подлец. / Сильное оскорбление: мерзкое существо.",
       "example": "После соития тварь грустна",
-      "example_source": "https://lurkmore.org/wiki/%D0%9F%D0%BE%D1%81%D0%BB%D0%B5_%D1%81%D0%BE%D0%B8%D1%82%D0%B8%D1%8F_%D1%82%D0%B2%D0%B0%D1%80%D1%8C_%D0%B3%D1%80%D1%83%D1%81%D1%82%D0%BD%D0%B0",
-      "example_title": "После соития тварь грустна",
+      "example_source": null,
+      "example_title": null,
       "image": "https://neolurk.org/w/images/8/87/%D0%9B%D0%B0%D0%B2%D0%BA%D1%80%D0%B0%D1%84%D1%82_%D0%9D%D0%B5%D0%BA%D1%80%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%BE%D0%BD.png",
       "image_source": "https://lurkmore.org/wiki/%D0%9E%D0%B1%D0%BB%D0%B0%D1%87%D0%BD%D0%B0%D1%8F_%D0%A2%D0%B2%D0%B0%D1%80%D1%8C"
     },
@@ -6469,9 +6469,9 @@
         "mat"
       ],
       "definition": "Грубое диалектное: женская грудь.",
-      "example": "Жоана Мадзестеш",
-      "example_source": "https://lurkmore.org/wiki/%D0%96%D0%BE%D0%B0%D0%BD%D0%B0_%D0%9C%D0%B0%D0%B4%D0%B7%D0%B5%D1%81%D1%82%D0%B5%D1%88",
-      "example_title": "Жоана Мадзестеш",
+      "example": "«титька» — Грубое диалектное: женская грудь.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -6573,7 +6573,7 @@
         "mat"
       ],
       "definition": "Региональный грубый сленг: половой акт.",
-      "example": null,
+      "example": "«трепак» — Региональный грубый сленг: половой акт.",
       "example_source": null,
       "example_title": null,
       "image": null,
@@ -6690,7 +6690,7 @@
         "mat"
       ],
       "definition": "Гнилая органика; переносно — ничтожество.",
-      "example": null,
+      "example": "«трухня» — Гнилая органика; переносно — ничтожество.",
       "example_source": null,
       "example_title": null,
       "image": null,
@@ -6703,9 +6703,9 @@
         "mat"
       ],
       "definition": "Оскорбление: глупый человек.",
-      "example": "Низкий старший брат, высокий младший",
-      "example_source": "https://lurkmore.org/wiki/%D0%9D%D0%B8%D0%B7%D0%BA%D0%B8%D0%B9_%D1%81%D1%82%D0%B0%D1%80%D1%88%D0%B8%D0%B9_%D0%B1%D1%80%D0%B0%D1%82%2C_%D0%B2%D1%8B%D1%81%D0%BE%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BB%D0%B0%D0%B4%D1%88%D0%B8%D0%B9",
-      "example_title": "Низкий старший брат, высокий младший",
+      "example": "«тупица» — Оскорбление: глупый человек.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -6768,9 +6768,9 @@
         "mat"
       ],
       "definition": "Крайне грубое оскорбление человека.",
-      "example": "Роснефть",
-      "example_source": "https://lurkmore.org/wiki/%D0%A0%D0%BE%D1%81%D0%BD%D0%B5%D1%84%D1%82%D1%8C",
-      "example_title": "Роснефть",
+      "example": "«уебище» — Крайне грубое оскорбление человека.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -6781,11 +6781,11 @@
         "mat"
       ],
       "definition": "Грубое оскорбление.",
-      "example": "Старая копипаста:Альфадрот",
-      "example_source": "https://lurkmore.org/wiki/%D0%A1%D1%82%D0%B0%D1%80%D0%B0%D1%8F_%D0%BA%D0%BE%D0%BF%D0%B8%D0%BF%D0%B0%D1%81%D1%82%D0%B0%3A%D0%90%D0%BB%D1%8C%D1%84%D0%B0%D0%B4%D1%80%D0%BE%D1%82",
-      "example_title": "Старая копипаста:Альфадрот",
-      "image": "https://neolurk.org/w/images/6/63/%D0%A4%D1%80%D0%B8%D1%82%D1%86%D0%BB%D1%8C.jpg",
-      "image_source": "https://lurkmore.org/wiki/%D0%91%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9_%D1%83%D1%91%D0%B1%D0%BE%D0%BA"
+      "example": "«уебок» — Грубое оскорбление.",
+      "example_source": null,
+      "example_title": null,
+      "image": null,
+      "image_source": null
     },
     {
       "word": "уебыш",
@@ -6794,7 +6794,7 @@
         "mat"
       ],
       "definition": "Уменьшительно-грубое оскорбление.",
-      "example": null,
+      "example": "«уебыш» — Уменьшительно-грубое оскорбление.",
       "example_source": null,
       "example_title": null,
       "image": null,
@@ -6846,9 +6846,9 @@
         "mat"
       ],
       "definition": "Книжное слово для полового члена.",
-      "example": "Мужской половой (детородный) хуй (moon. 男性器, moon.",
-      "example_source": "https://lurkmore.org/wiki/%D0%9C%D0%9F%D0%A5",
-      "example_title": "МПХ",
+      "example": "«фаллос» — Книжное слово для полового члена.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -6965,8 +6965,8 @@
       ],
       "definition": "Эвфемизм: ерунда, чушь. / Ерунда, несерьёзная вещь; «полная фигня».",
       "example": "Фигня, переделывай — разговорное выражение, означающее, что некая работа была выполнена некачественным образом и её нужно выполнить снова, но уже надлежащим образом.",
-      "example_source": "https://lurkmore.org/wiki/%D0%A4%D0%B8%D0%B3%D0%BD%D1%8F%2C_%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D1%8B%D0%B2%D0%B0%D0%B9",
-      "example_title": "Фигня, переделывай",
+      "example_source": null,
+      "example_title": null,
       "image": "https://neolurk.org/w/images/6/6c/Fignya%2C_peredelyvaj.png",
       "image_source": "https://lurkmore.org/wiki/%D0%A4%D0%B8%D0%B3%D0%BD%D1%8F%2C_%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D1%8B%D0%B2%D0%B0%D0%B9"
     },
@@ -7172,7 +7172,7 @@
         "mat"
       ],
       "definition": "Оскорбление: грубая, наглая женщина.",
-      "example": null,
+      "example": "«хамина» — Оскорбление: грубая, наглая женщина.",
       "example_source": null,
       "example_title": null,
       "image": null,
@@ -7185,9 +7185,9 @@
         "mat"
       ],
       "definition": "Оскорбление: грубая женщина.",
-      "example": "Одзё-сама",
-      "example_source": "https://lurkmore.org/wiki/%D0%9E%D0%B4%D0%B7%D1%91-%D1%81%D0%B0%D0%BC%D0%B0",
-      "example_title": "Одзё-сама",
+      "example": "«хамка» — Оскорбление: грубая женщина.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -7198,9 +7198,9 @@
         "mat"
       ],
       "definition": "Собирательное: хамы, грубые люди.",
-      "example": "Люциус Малфой",
-      "example_source": "https://lurkmore.org/wiki/%D0%9B%D1%8E%D1%86%D0%B8%D1%83%D1%81_%D0%9C%D0%B0%D0%BB%D1%84%D0%BE%D0%B9",
-      "example_title": "Люциус Малфой",
+      "example": "«хамло» — Собирательное: хамы, грубые люди.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -7277,11 +7277,11 @@
         "dvach"
       ],
       "definition": "Эвфемизм: чушь, ерунда (от «хер»). / Ерунда, чушь; эвфемизм вместо грубого.",
-      "example": "Хуита́ (англ. XYNTA, фонетически по одной версии Who it ah, а если с расово бостонским акцентом — Who it are, moon.",
-      "example_source": "https://lurkmore.org/wiki/%D0%A5%D1%83%D0%B8%D1%82%D0%B0",
-      "example_title": "Хуита",
-      "image": "https://neolurk.org/w/images/1/1a/Huita.jpg",
-      "image_source": "https://lurkmore.org/wiki/%D0%A5%D1%83%D0%B8%D1%82%D0%B0"
+      "example": "«херня» — Эвфемизм: чушь, ерунда (от «хер»).",
+      "example_source": null,
+      "example_title": null,
+      "image": null,
+      "image_source": null
     },
     {
       "word": "хикка",
@@ -7342,9 +7342,9 @@
         "mat"
       ],
       "definition": "Субстантивированное «плохо» (от «хуй»).",
-      "example": "Не лезь, дебил!",
-      "example_source": "https://lurkmore.org/wiki/%D0%9D%D0%B5_%D0%BB%D0%B5%D0%B7%D1%8C%2C_%D0%B4%D0%B5%D0%B1%D0%B8%D0%BB%21",
-      "example_title": "Не лезь, дебил!",
+      "example": "«хуево» — Субстантивированное «плохо» (от «хуй»).",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -7355,9 +7355,9 @@
         "mat"
       ],
       "definition": "Крайне грубое оскорбление.",
-      "example": "Минетчик — цензурная замена термина «х##сос».",
-      "example_source": "https://lurkmore.org/wiki/%D0%9C%D0%B8%D0%BD%D0%B5%D1%82%D1%87%D0%B8%D0%BA",
-      "example_title": "Минетчик",
+      "example": "«хуесос» — Крайне грубое оскорбление.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -7368,9 +7368,9 @@
         "mat"
       ],
       "definition": "Грубое: чушь, плохая ситуация.",
-      "example": "Хуита́ (англ. XYNTA, фонетически по одной версии Who it ah, а если с расово бостонским акцентом — Who it are, moon.",
-      "example_source": "https://lurkmore.org/wiki/%D0%A5%D1%83%D0%B8%D1%82%D0%B0",
-      "example_title": "Хуита",
+      "example": "«хуета» — Грубое: чушь, плохая ситуация.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -7381,9 +7381,9 @@
         "mat"
       ],
       "definition": "Грубое оскорбление мужчины.",
-      "example": "Шао Кан",
-      "example_source": "https://lurkmore.org/wiki/%D0%A8%D0%B0%D0%BE_%D0%9A%D0%B0%D0%BD",
-      "example_title": "Шао Кан",
+      "example": "«хуила» — Грубое оскорбление мужчины.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -7407,9 +7407,9 @@
         "mat"
       ],
       "definition": "Увеличительное грубое оскорбление.",
-      "example": "Санкт-Петербург",
-      "example_source": "https://lurkmore.org/wiki/%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3",
-      "example_title": "Санкт-Петербург",
+      "example": "«хуище» — Увеличительное грубое оскорбление.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -7422,8 +7422,8 @@
       ],
       "definition": "Оскорбление: подлец, идиот. / Грубое оскорбление (особенно политическое прозвище).",
       "example": "«Путін — хуйло!» — Путін хуйло — главный украинский хит™ 2014 года, взорвавший околофутбольные хит-парады, а также ватные задницы.",
-      "example_source": "https://lurkmore.org/wiki/%D0%9F%D1%83%D1%82%D1%96%D0%BD_%E2%80%94_%D1%85%D1%83%D0%B9%D0%BB%D0%BE",
-      "example_title": "Путін — хуйло",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -7448,11 +7448,11 @@
         "dvach"
       ],
       "definition": "Грубое: ерунда, чушь. / Грубое: ерунда, плохая вещь.",
-      "example": "Хуита́ (англ. XYNTA, фонетически по одной версии Who it ah, а если с расово бостонским акцентом — Who it are, moon.",
-      "example_source": "https://lurkmore.org/wiki/%D0%A5%D1%83%D0%B8%D1%82%D0%B0",
-      "example_title": "Хуита",
-      "image": "https://neolurk.org/w/images/1/1a/Huita.jpg",
-      "image_source": "https://lurkmore.org/wiki/%D0%A5%D1%83%D0%B8%D1%82%D0%B0"
+      "example": "«хуйня» — Грубое: ерунда, чушь.",
+      "example_source": null,
+      "example_title": null,
+      "image": null,
+      "image_source": null
     },
     {
       "word": "хуйцы",
@@ -7487,9 +7487,9 @@
         "mat"
       ],
       "definition": "Грубое: драка, побои (от «хуярить»).",
-      "example": "Географические напевы",
-      "example_source": "https://lurkmore.org/wiki/%D0%93%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5_%D0%BD%D0%B0%D0%BF%D0%B5%D0%B2%D1%8B",
-      "example_title": "Географические напевы",
+      "example": "«хуяра» — Грубое: драка, побои (от «хуярить»).",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -7500,9 +7500,9 @@
         "mat"
       ],
       "definition": "Грубое: девственница.",
-      "example": "Девственник — мужчина, у которого не было секса, особенно после совершеннолетия.",
-      "example_source": "https://lurkmore.org/wiki/%D0%94%D0%B5%D0%B2%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%B8%D0%BA",
-      "example_title": "Девственник",
+      "example": "«целка» — Грубое: девственница.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -7617,9 +7617,9 @@
         "mat"
       ],
       "definition": "Оскорбление: ничтожество, униженный человек.",
-      "example": "Yo dawg",
-      "example_source": "https://lurkmore.org/wiki/Yo_dawg",
-      "example_title": "Yo dawg",
+      "example": "«чмырь» — Оскорбление: ничтожество, униженный человек.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -7631,8 +7631,8 @@
       ],
       "definition": "Оскорбление: глупый, деревенский человек.",
       "example": "Ларин чушка ебаная",
-      "example_source": "https://lurkmore.org/wiki/%D0%9B%D0%B0%D1%80%D0%B8%D0%BD_%D1%87%D1%83%D1%88%D0%BA%D0%B0_%D0%B5%D0%B1%D0%B0%D0%BD%D0%B0%D1%8F",
-      "example_title": "Ларин чушка ебаная",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -7643,9 +7643,9 @@
         "mat"
       ],
       "definition": "То же, уменьшительное.",
-      "example": "Паша Бумчик",
-      "example_source": "https://lurkmore.org/wiki/%D0%9F%D0%B0%D1%88%D0%B0_%D0%91%D1%83%D0%BC%D1%87%D0%B8%D0%BA",
-      "example_title": "Паша Бумчик",
+      "example": "«чушок» — То же, уменьшительное.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -7658,8 +7658,8 @@
       ],
       "definition": "Оскорбление: глупый необразованный человек. / Оскорбление: глупый, необразованный человек.",
       "example": "Чушпан — известное слово из сериала Слово пацана.",
-      "example_source": "https://lurkmore.org/wiki/%D0%A7%D1%83%D1%88%D0%BF%D0%B0%D0%BD",
-      "example_title": "Чушпан",
+      "example_source": null,
+      "example_title": null,
       "image": "https://neolurk.org/w/images/4/4a/Photo41-40.jpg",
       "image_source": "https://lurkmore.org/wiki/%D0%A7%D1%83%D1%88%D0%BF%D0%B0%D0%BD"
     },
@@ -7683,9 +7683,9 @@
         "mat"
       ],
       "definition": "Грубое оскорбление женщины (распутница).",
-      "example": "Шлюха (блудница; англ. slut, whore, hooker, harlot) — cамоходная пизда.",
-      "example_source": "https://lurkmore.org/wiki/%D0%A8%D0%BB%D1%8E%D1%85%D0%B0",
-      "example_title": "Шлюха",
+      "example": "«шалава» — Грубое оскорбление женщины (распутница).",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -7696,9 +7696,9 @@
         "mat"
       ],
       "definition": "Оскорбление: низкий, мерзкий человек.",
-      "example": "Коренные народы России",
-      "example_source": "https://lurkmore.org/wiki/%D0%9A%D0%BE%D1%80%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5_%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D1%8B_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8",
-      "example_title": "Коренные народы России",
+      "example": "«шваль» — Оскорбление: низкий, мерзкий человек.",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -7828,8 +7828,8 @@
       ],
       "definition": "Грубое: проститутка; оскорбление женщины. / Грубое оскорбление женщины.",
       "example": "Шлюха (блудница; англ. slut, whore, hooker, harlot) — cамоходная пизда.",
-      "example_source": "https://lurkmore.org/wiki/%D0%A8%D0%BB%D1%8E%D1%85%D0%B0",
-      "example_title": "Шлюха",
+      "example_source": null,
+      "example_title": null,
       "image": "https://neolurk.org/w/images/7/75/3189429_large-2.jpg",
       "image_source": "https://lurkmore.org/wiki/%D0%A8%D0%BB%D1%8E%D1%85%D0%B0"
     },
@@ -7840,9 +7840,9 @@
         "mat"
       ],
       "definition": "Уменьшительно-грубое от «шлюха».",
-      "example": "Шлюха (блудница; англ. slut, whore, hooker, harlot) — cамоходная пизда.",
-      "example_source": "https://lurkmore.org/wiki/%D0%A8%D0%BB%D1%8E%D1%85%D0%B0",
-      "example_title": "Шлюха",
+      "example": "«шлюшка» — Уменьшительно-грубое от «шлюха».",
+      "example_source": null,
+      "example_title": null,
       "image": null,
       "image_source": null
     },
@@ -7854,11 +7854,11 @@
         "dvach"
       ],
       "definition": "Грубое оскорбление женщины. / Грубое оскорбление; неприятная женщина.",
-      "example": "Жлоб (также жмот) — человек, погрязший в жадности и крохоборстве.",
-      "example_source": "https://lurkmore.org/wiki/%D0%96%D0%BB%D0%BE%D0%B1",
-      "example_title": "Жлоб",
-      "image": "https://neolurk.org/w/images/2/22/Zhlobus.jpg",
-      "image_source": "https://lurkmore.org/wiki/%D0%96%D0%BB%D0%BE%D0%B1"
+      "example": "«Эта шмара опять всё испортила» — грубое оскорбление женщины в разговорной речи.",
+      "example_source": null,
+      "example_title": null,
+      "image": "https://neolurk.org/w/images/0/0c/Shmary.png",
+      "image_source": "https://lurkmore.org/wiki/%D0%96%D0%BB%D0%BE%D0%B1#.D0.A1.D0.B0.D0.BC.D0.BA.D0.B0_.D0.B6.D0.BB.D0.BE.D0.B1.D0.B0"
     },
     {
       "word": "шмоня",
@@ -7867,7 +7867,7 @@
         "mat"
       ],
       "definition": "Устаревший жаргон: обыск; редкое грубое слово.",
-      "example": null,
+      "example": "«шмоня» — Устаревший жаргон: обыск; редкое грубое слово.",
       "example_source": null,
       "example_title": null,
       "image": null,

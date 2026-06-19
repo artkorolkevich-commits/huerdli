@@ -67,6 +67,17 @@ MEME_REVIEW_OVERRIDES: dict[str, dict[str, str]] = {
         "image": "https://neolurk.org/w/images/7/7f/Sert_condom.jpg",
         "image_source": "https://lurkmore.org/wiki/%D0%93%D0%BE%D0%BD%D0%B4%D0%BE%D0%BD",
     },
+    "шмара": {
+        "example": (
+            "«Эта шмара опять всё испортила» — грубое оскорбление женщины "
+            "в разговорной речи."
+        ),
+        "image": "https://neolurk.org/w/images/0/0c/Shmary.png",
+        "image_source": (
+            "https://lurkmore.org/wiki/%D0%96%D0%BB%D0%BE%D0%B1"
+            "#.D0.A1.D0.B0.D0.BC.D0.BA.D0.B0_.D0.B6.D0.BB.D0.BE.D0.B1.D0.B0"
+        ),
+    },
     "говновоз": {
         "image": "https://neolurk.org/w/images/4/49/Jkljkljkljjkljihjkl.jpg",
         "image_source": "https://lurkmore.org/wiki/%D0%9A%D0%B0%D0%B2%D0%B5%D1%80%D1%8B_%D1%81_%D0%B3%D0%BE%D0%B2%D0%BD%D0%BE%D0%B2%D0%BE%D0%B7%D0%BE%D0%BC",
